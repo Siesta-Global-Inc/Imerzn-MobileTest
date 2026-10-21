@@ -1,7 +1,0 @@
-# New values entered on localite Dashboard > Settings > Edit. Keep the Field names as written.
-# Phone is 10 digits without country code (United States +1). Bio is up to 500 characters.
-# Business Name is required by the site to save (new localites have none stored).
-Field,Value
-Phone,2125550188
-Bio,"Updated bio: New York local guide for food walks, street art, and hidden rooftop views."
-Business Name,Automation Tours

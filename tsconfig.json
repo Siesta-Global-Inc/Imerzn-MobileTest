@@ -7,25 +7,25 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["node", "@playwright/test"],
+    "types": ["node", "@wdio/globals/types", "@wdio/mocha-framework", "expect-webdriverio"],
     "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
 
-    // Short import paths, e.g. '@pages/auth/login-page' instead of '../../pages/auth/login-page'.
-    // Playwright reads these same aliases when it runs the tests.
+    // Short import paths, e.g. '@pages/auth/mobile-login-page'.
+    // WebdriverIO reads these aliases from this file (tsConfigPath in mobile-wdio.conf.ts).
     "baseUrl": ".",
     "paths": {
       "@config/*": ["config/*"],
       "@data/*": ["data/*"],
-      "@fixtures/*": ["fixtures/*"],
       "@helpers/*": ["helpers/*"],
       "@pages/*": ["pages/*"]
     }
   },
   "include": [
-    "playwright.config.ts",
+    "mobile-wdio.conf.ts",
     "config/**/*.ts",
     "data/**/*.ts",
-    "fixtures/**/*.ts",
     "helpers/**/*.ts",
     "pages/**/*.ts",
     "tests/**/*.ts"

@@ -5,6 +5,7 @@
 Field,Value
 Title Prefix,My Story
 Location,"New York, NY, USA"
+Mobile Location,"Addison, Texas, United States"
 Description,"A sunny walk through Central Park, bagels on the Lower East Side, and sunset views from the Brooklyn Bridge."
 Image,testdata/traveler/story-image.png
 Updated Title Prefix,My Updated Story

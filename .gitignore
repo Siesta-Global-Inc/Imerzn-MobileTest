@@ -1,49 +1,31 @@
 # Dependencies
 node_modules/
 
-# Playwright reports and test artifacts
-playwright-report/
-test-results/
-playwright/.cache/
-blob-report/
-
 # Environment variables and secrets
 .env
 .env.*
 !.env.example
 
-# Local authentication data
+# Local test data: logins, and the accounts and bookings the tests create and share
 testdata/common/auth.csv
-testdata/localite/created-localite.json
-testdata/localite/created-content.json
-testdata/traveler/created-traveler.json
-testdata/traveler/created-bookings.json
+testdata/localite/mobile-created-localite.json
+testdata/traveler/mobile-created-traveler.json
+testdata/traveler/mobile-created-bookings.json
+
+# App build (large binary; CI downloads it from a GitHub Release)
+testdata/apk/
+
+# Appium/WebdriverIO results: failure screenshots, element trees, Appium log
+mobile-test-results/
 
 # Logs
 *.log
 npm-debug.log*
-
-# Coverage reports
-coverage/
-
-# Build output
-dist/
-build/
 
 # OS files
 .DS_Store
 Thumbs.db
 Desktop.ini
 
-# Local editor settings (optional)
-.vscode/*
-!.vscode/extensions.json
-
-# Local AI/MCP cache (only if generated locally)
-.playwright-mcp/
-# CI failure page and JSON results (generated)
-public-report/
-results.json
-
-# Saved logins reused by fixtures/session.ts (they hold login tokens)
-.auth/
+# Local editor settings
+.vscode/

@@ -7,3 +7,5 @@ Location,"New York, NY, USA"
 Description,"A visual journey through New York City: street food, skyline views, and hidden neighborhood corners captured on a local walking tour."
 Primary Image,testdata/localite/gallery.png
 Additional Media,
+# Mobile app only: picked from the location suggestions (the app keeps only a picked location).
+Mobile Location,"Addison, New York, United States"

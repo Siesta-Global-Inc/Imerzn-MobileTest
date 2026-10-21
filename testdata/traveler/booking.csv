@@ -16,6 +16,10 @@ Billing Full Name,Traveler Automation
 Billing Location,"New York, NY, USA"
 Billing Address,350 5th Ave
 Billing Zip,10118
+# Mobile app: Country, State, and City are picked from searchable lists.
+Mobile Billing Country,United States
+Mobile Billing State,New York
+Mobile Billing City,New York City
 # Second booking left unpaid (pending): booked, then the Payment dialog is cancelled.
 Pending Days From Today,2
 Pending Group Size,3

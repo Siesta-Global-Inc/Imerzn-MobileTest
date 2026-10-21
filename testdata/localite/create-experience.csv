@@ -5,7 +5,7 @@ Field,Value
 Experience Type,Normal Experience
 Title,Automation
 Category,Culture & Heritage
-Location,New York
+Location,"Addison, New York, United States"
 Price,45
 Know Before,Comfortable walking shoes are recommended. Please arrive 10 minutes before the scheduled start time.
 Transport Type,No
@@ -13,11 +13,11 @@ Accessibility,No
 Min People,1
 Max People,20
 Multi Day,No
-Duration,2
+Duration,  1
 Same Time All Days,Yes
 Starting Times,9:00 AM|1:30 PM
-Meeting Point,"New York, NY, USA"
-Drop-off Point,"New York, NY, USA"
+Meeting Point,"Addison, New York, United States"
+Drop-off Point,"Addison, New York, United States"
 Status,Active
 Meeting/Drop-off Notes,Please meet your guide at the Boston Common Visitor Center 10 minutes before the start time.
 Included,Professional local guide|Walking tour
@@ -25,3 +25,6 @@ Description,"Explore Boston's historic Freedom Trail with a local guide. Discove
 Policy,Free cancellation up to 24 hours before the experience. Cancellations made less than 24 hours before the start time are non-refundable.
 Primary Image,testdata/localite/primary-image.png
 Additional Media,
+# Mobile app only: picked from the location suggestions (the app keeps only a picked location).
+Mobile Location,"Addison, New York, United States"
+Mobile Policy,Free cancellation up to 24 hours before.
