@@ -90,6 +90,16 @@ docs/                            Prompt and framework notes
 
 Imports use short aliases from `tsconfig.json`: `@config/…`, `@data/…`, `@helpers/…`, `@pages/…`.
 
+## GitHub Actions
+
+`.github/workflows/mobile-tests.yml` runs all tests on an Android emulator (API 34, Pixel 6) after every push to `main`, or from **Actions > Mobile Tests > Run workflow** (optionally one test file). It needs:
+
+- **The APK in a GitHub Release:** Releases > Draft a new release, attach `app-debug.apk`, publish. Each run uses the newest release's `.apk`, so publish a new release for each new build.
+- **Secret `AUTH_CSV_BASE64`:** `testdata/common/auth.csv` in base64 (`[Convert]::ToBase64String([IO.File]::ReadAllBytes("testdata\common\auth.csv"))`).
+- **Secret `SLACK_WEBHOOK_URL`** (optional): posts the result to Slack.
+
+Failure screenshots, element trees and the Appium log are in the run's `mobile-test-results` artifact.
+
 ## Debugging
 
 Failure screenshots, the screen's element tree, and the Appium log go to `mobile-test-results/`.
