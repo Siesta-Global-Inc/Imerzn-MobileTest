@@ -1,5 +1,6 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { join, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { mobileEnv } from './config/mobile-env';
 
 // Appium needs the Android SDK location.
@@ -10,6 +11,8 @@ const appPackage = 'com.app.siestaglobal';
 const appActivity = 'com.app.siestaglobal.MainActivity';
 
 const resultsDir = resolve('mobile-test-results');
+/** Failed tests of this run, one JSON object per line (error and screenshot path). */
+const failuresFile = join(resultsDir, 'failures.jsonl');
 
 // Tests use the running emulator or USB phone (start the emulator with `npm run mobile:emulator`).
 // Set MOBILE_AVD=<AVD name> to let Appium start that emulator instead (slow: it cold boots each run).
@@ -45,6 +48,9 @@ export const config: WebdriverIO.Config = {
   ],
   // One device, so run one test file at a time.
   maxInstances: 1,
+  // On CI, run a failed test file once more right away: on a freshly booted emulator the first
+  // session can fail while Appium's keyboard is still being registered.
+  specFileRetries: process.env.CI ? 1 : 0,
 
   // Appium is started and stopped by the appium service (installed in node_modules).
   port: 4723,
@@ -105,6 +111,7 @@ export const config: WebdriverIO.Config = {
 
   onPrepare() {
     mkdirSync(resultsDir, { recursive: true });
+    rmSync(failuresFile, { force: true });
   },
 
   /** Do not wait for the app to go idle: its background video keeps the UI thread busy. */
@@ -113,14 +120,31 @@ export const config: WebdriverIO.Config = {
   },
 
   /** Save a screenshot of the device when a test fails. */
-  async afterTest(test, _context, { passed }) {
+  async afterTest(test, _context, { passed, error }) {
     if (!passed) {
       const name = test.title.replace(/[^\w-]+/g, '_');
-      await browser.saveScreenshot(join(resultsDir, `${name}.png`)).catch(() => {});
+      const screenshot = join(resultsDir, `${name}.png`);
+      await browser.saveScreenshot(screenshot).catch(() => {});
       // The screen's element tree, to see which elements were there when the test failed.
       await browser.getPageSource()
         .then((source) => writeFileSync(join(resultsDir, `${name}.xml`), source))
         .catch(() => {});
+      // One line per failed test, for the Slack report (scripts/slack-report.mjs).
+      appendFileSync(failuresFile, `${JSON.stringify({
+        title: test.fullTitle ?? test.title,
+        file: test.file ? relative(process.cwd(), test.file) : undefined,
+        error: error?.stack ?? error?.message ?? String(error ?? ''),
+        images: [screenshot],
+      })}\n`);
     }
+  },
+
+  /** A test file that passed on its retry is not a failure: drop what its first attempt recorded. */
+  after(result, _capabilities, specs) {
+    if (result !== 0 || !existsSync(failuresFile)) return;
+    const files = new Set(specs.map((spec) => relative(process.cwd(), spec.startsWith('file:') ? fileURLToPath(spec) : spec)));
+    const kept = readFileSync(failuresFile, 'utf8').split('\n')
+      .filter((line) => line && !files.has(JSON.parse(line).file));
+    writeFileSync(failuresFile, kept.map((line) => `${line}\n`).join(''));
   },
 };
