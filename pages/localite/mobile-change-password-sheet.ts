@@ -1,4 +1,4 @@
-import { byLabel, fillField } from '@helpers/mobile-elements';
+import { byLabel, fillField, screenLabels } from '@helpers/mobile-elements';
 
 /** "Change Password" sheet, opened by Update Password on the localite Profile. */
 export class MobileChangePasswordSheet {
@@ -29,18 +29,31 @@ export class MobileChangePasswordSheet {
     await this.heading.waitForDisplayed({ timeout: 30_000 });
   }
 
-  /** Fill the three fields and tap Update Password; the sheet closes when the change is saved. */
-  async changePassword(currentPassword: string, newPassword: string): Promise<void> {
+  /**
+   * Fill the three fields and tap Update Password; the sheet closes when the change is saved.
+   * Returns the message the app shows after the tap (e.g. a success message), or '' if none.
+   */
+  async changePassword(currentPassword: string, newPassword: string): Promise<string> {
     await this.waitForLoaded();
     await fillField(this.currentPasswordInput, currentPassword);
     await fillField(this.newPasswordInput, newPassword);
     await fillField(this.confirmPasswordInput, newPassword);
 
+    const labelsBefore = new Set(await screenLabels());
     await this.updatePasswordButton.click();
+    // Collect any new message (snackbar/toast) for a few seconds after the tap.
+    let message = '';
+    await browser.waitUntil(async () => {
+      message = (await screenLabels()).find((label) => !labelsBefore.has(label)
+        && /password|success|updated|changed|fail|error|incorrect|invalid|wrong/i.test(label)) ?? message;
+      return message !== '';
+    }, { timeout: 10_000, interval: 1_000 }).catch(() => {});
     await this.heading.waitForDisplayed({
       reverse: true,
       timeout: 60_000,
-      timeoutMsg: 'The password was not changed: the Change Password sheet is still open.',
+      timeoutMsg: `The password was not changed: the Change Password sheet is still open${message ? ` (app message: "${message}")` : ''}.`,
     });
+    return message;
   }
 }
+

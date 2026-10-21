@@ -1,5 +1,8 @@
-import { byLabel, scrollTo, xpathString } from '@helpers/mobile-elements';
+import { byLabel, centerOnScreen, screenLabels, scrollTo, xpathString } from '@helpers/mobile-elements';
 import { toAmount } from '@pages/traveler/mobile-payment-dialog';
+
+/** Column headers of the Referral History table. */
+const historyColumns = ['Localite', 'Referral %', 'Total Earned', 'Withdrawable', 'Status'];
 
 /** One row of the Referral History table. Amounts are whole dollars in the app, e.g. "$72". */
 export interface MobileReferralHistoryRow {
@@ -37,11 +40,6 @@ export class MobileReferralPage {
     return browser.$('//android.widget.Button[@content-desc="Withdraw"]');
   }
 
-  /** Status badge of the row (shown after scrolling the table sideways). */
-  get statusCell() {
-    return browser.$('//*[@content-desc="Active" or @content-desc="Inactive" or @content-desc="Pending"]');
-  }
-
   /** "Withdraw Payment" dialog: one label with "Name\n...\nAmount\n$<amount>". */
   get withdrawDialog() {
     return browser.$('//*[starts-with(@content-desc, "Withdraw Payment")]');
@@ -56,23 +54,57 @@ export class MobileReferralPage {
     await expect(this.referralCode(referralCode)).toBeDisplayed();
   }
 
-  /** Read the referee's row: the first columns, then (scrolled sideways) the status and Withdraw. */
+  /**
+   * Read the referee's row: the columns on screen, then (scrolled sideways) the rest. Each cell is
+   * matched to its column by the header above it, since how many columns fit depends on the
+   * screen width (on CI's narrower screen Withdrawable is off screen at first).
+   */
   async readHistoryRow(refereeName: string): Promise<MobileReferralHistoryRow> {
     await scrollTo(this.historyHeading, 'down', 6);
     await scrollTo(this.nameCell(refereeName), 'down', 6);
-    // Appium searches from an element only look inside it, so find the neighbours from the root.
-    const cell = (index: number) => browser.$(
-      `//*[contains(@content-desc, ${xpathString(`\n${refereeName}`)})]/following-sibling::*[${index}]`,
-    );
-    const referralPercent = (await cell(1).getAttribute('content-desc')) ?? '';
-    const totalEarned = toAmount((await cell(2).getAttribute('content-desc')) ?? '');
-    const withdrawable = toAmount((await cell(3).getAttribute('content-desc')) ?? '');
+    // Keep the row away from the bottom edge, where its cells can be cut off.
+    await centerOnScreen(this.nameCell(refereeName));
+    const { y, height } = await this.nameCell(refereeName).getElementRect(await this.nameCell(refereeName).elementId);
+    const row = { top: y, bottom: y + height };
 
-    await this.scrollTable('left');
-    const status = (await this.statusCell.getAttribute('content-desc').catch(() => '')) ?? '';
+    const cells = await this.rowCells(row);
+    await this.scrollTable('left', row);
+    Object.assign(cells, { ...(await this.rowCells(row)), ...cells });
     const canWithdraw = await this.withdrawButton.isDisplayed().catch(() => false);
-    await this.scrollTable('right');
-    return { referralPercent, totalEarned, withdrawable, status, canWithdraw };
+    await this.scrollTable('right', row);
+    return {
+      referralPercent: cells['Referral %'] ?? '',
+      totalEarned: toAmount(cells['Total Earned'] ?? ''),
+      withdrawable: toAmount(cells.Withdrawable ?? ''),
+      status: cells.Status ?? '',
+      canWithdraw,
+    };
+  }
+
+  /**
+   * Cells of the row between the given heights that are on screen, by column name: each label in
+   * the row goes to the column header whose left and right edges are around it.
+   */
+  private async rowCells(row: { top: number; bottom: number }): Promise<Record<string, string>> {
+    const nodes = [...(await browser.getPageSource()).matchAll(
+      /content-desc="([^"]+)"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/g,
+    )].map(([, label, x1, y1, x2, y2]) => ({
+      label: label.replace(/&#10;/g, '\n').replace(/&amp;/g, '&'),
+      left: Number(x1), right: Number(x2), middleY: (Number(y1) + Number(y2)) / 2,
+    }));
+    const headers = nodes.filter((node) => historyColumns.includes(node.label));
+    const cells: Record<string, string> = {};
+    for (const node of nodes) {
+      if (node.middleY < row.top || node.middleY > row.bottom || node.label === 'Withdraw') {
+        continue;
+      }
+      const middleX = (node.left + node.right) / 2;
+      const header = headers.find((h) => middleX >= h.left - 20 && middleX <= h.right + 20);
+      if (header && !(header.label in cells)) {
+        cells[header.label] = node.label;
+      }
+    }
+    return cells;
   }
 
   /**
@@ -87,12 +119,12 @@ export class MobileReferralPage {
     await this.withdrawDialog.waitForDisplayed({ timeout: 30_000 });
     const label = (await this.withdrawDialog.getAttribute('content-desc')) ?? '';
     const amount = toAmount(/Amount\n([^\n]+)/.exec(label)?.[1] ?? '');
-    const labelsBefore = new Set(await this.screenLabels());
+    const labelsBefore = new Set(await screenLabels());
     await this.submitButton.click();
     // Collect any new message (snackbar/toast) for a few seconds after Submit.
     let message = '';
     await browser.waitUntil(async () => {
-      message = (await this.screenLabels()).find((label) => !labelsBefore.has(label)
+      message = (await screenLabels()).find((label) => !labelsBefore.has(label)
         && /withdraw|request|pending|success|fail|error|insufficient/i.test(label)) ?? message;
       return message !== '';
     }, { timeout: 10_000, interval: 1_000 }).catch(() => {});
@@ -105,20 +137,17 @@ export class MobileReferralPage {
     return { amount, message };
   }
 
-  /** All labels currently exposed on screen. */
-  private async screenLabels(): Promise<string[]> {
-    const source = await browser.getPageSource();
-    return [...source.matchAll(/content-desc="([^"]+)"/g)].map((match) => match[1]);
-  }
 
-  /** Swipe the Referral History table sideways ('left' shows the right-hand columns). */
-  private async scrollTable(direction: 'left' | 'right'): Promise<void> {
-    // The "Referral History" heading stays put while the table scrolls; the row is about 480px
-    // below it (the column headers in between change as the table scrolls).
+  /**
+   * Swipe the Referral History table sideways ('left' shows the right-hand columns), along the
+   * given row or, without one, about 480px below the "Referral History" heading (the heading
+   * stays put while the table scrolls).
+   */
+  private async scrollTable(direction: 'left' | 'right', rowBounds?: { top: number; bottom: number }): Promise<void> {
     await this.historyHeading.waitForDisplayed({ timeout: 30_000 });
     const { y, height } = await this.historyHeading.getElementRect(await this.historyHeading.elementId);
     const { width } = await browser.getWindowSize();
-    const row = Math.round(y + height + 480);
+    const row = Math.round(rowBounds ? (rowBounds.top + rowBounds.bottom) / 2 : y + height + 480);
     const [from, to] = direction === 'left' ? [width * 0.82, width * 0.15] : [width * 0.15, width * 0.82];
     await browser
       .action('pointer', { parameters: { pointerType: 'touch' } })

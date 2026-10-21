@@ -1,5 +1,5 @@
 import type { MobileEditProfileData } from '@data/localite/mobile-localite-data';
-import { byLabel, fillField, scrollFormTo, xpathString } from '@helpers/mobile-elements';
+import { byLabel, fillField, screenLabels, scrollFormTo, xpathString } from '@helpers/mobile-elements';
 
 /** "Edit Profile" screen, opened from the localite Profile. */
 export class MobileEditProfilePage {
@@ -75,15 +75,25 @@ export class MobileEditProfilePage {
     }
   }
 
-  /** Tap Save and wait until the app leaves Edit Profile. */
+  /**
+   * Tap Save and wait until the app leaves Edit Profile. If it stays, fail with the message the
+   * app showed after the tap (e.g. a required field), when there was one.
+   */
   async save(): Promise<void> {
     await scrollFormTo(this.saveButton);
+    const labelsBefore = new Set(await screenLabels());
     await this.saveButton.click();
-    await this.heading.waitForDisplayed({
-      reverse: true,
-      timeout: 60_000,
-      timeoutMsg: 'The profile was not saved: still on "Edit Profile" after Save.',
-    });
+    let message = '';
+    const left = await browser.waitUntil(async () => {
+      if (!(await this.heading.isDisplayed().catch(() => false))) {
+        return true;
+      }
+      message = (await screenLabels()).find((label) => !labelsBefore.has(label)) ?? message;
+      return false;
+    }, { timeout: 60_000, interval: 1_000 }).catch(() => false);
+    if (!left) {
+      throw new Error(`The profile was not saved: still on "Edit Profile" after Save${message ? ` (app message: "${message}")` : ''}.`);
+    }
   }
 
   /** Experiences shown in the dropdown, e.g. ["Hiking", "Culture & Heritage"]. */
@@ -93,3 +103,4 @@ export class MobileEditProfilePage {
     return label.split(',').map((item) => item.trim()).filter((item) => item && item !== 'Select');
   }
 }
+

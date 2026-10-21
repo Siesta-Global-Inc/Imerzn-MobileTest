@@ -221,7 +221,7 @@ export class MobileCreateExperiencePage {
     await this.show(this.startingTimeDropdown);
     await this.startingTimeDropdown.click();
     for (const time of times) {
-      await this.scrollListTo(this.startingTimeOption(time));
+      await this.scrollListTo(this.startingTimeOption(time), time);
       await this.startingTimeOption(time).click();
     }
     await this.closeDropdown();
@@ -230,20 +230,30 @@ export class MobileCreateExperiencePage {
     }
   }
 
-  /** Drag inside an open dropdown list until the option is shown (the list starts at the top). */
-  private async scrollListTo(option: ReturnType<typeof browser.$>): Promise<void> {
+  /**
+   * Drag inside an open time list until the option is shown, down or back up depending on whether
+   * the first time on screen is before or after it (a drag can overshoot on a slow emulator).
+   */
+  private async scrollListTo(option: ReturnType<typeof browser.$>, time: string): Promise<void> {
+    const target = minutesOfDay(time);
     for (let drag = 0; drag < 25 && !(await option.isDisplayed()); drag += 1) {
       const first = browser.$('(//android.widget.Button[contains(@content-desc, " AM") or contains(@content-desc, " PM")])[1]');
       const { x, y, width } = await first.getElementRect(await first.elementId);
+      const down = minutesOfDay((await first.getAttribute('content-desc')) ?? '') < target;
       const centerX = Math.round(x + width / 2);
+      const [from, to] = down ? [y + 600, y + 100] : [y + 100, y + 600];
       await browser
         .action('pointer', { parameters: { pointerType: 'touch' } })
-        .move({ x: centerX, y: y + 600 })
+        .move({ x: centerX, y: from })
         .down()
         .pause(100)
-        .move({ duration: 600, x: centerX, y: y + 100 })
+        .move({ duration: 600, x: centerX, y: to })
+        // Hold still before lifting, so Android does not turn the drag into a fling: on CI the
+        // list flew past 1:30 PM to the end of the day.
+        .pause(400)
         .up()
         .perform();
+      await browser.pause(500);
     }
     await option.waitForDisplayed({ timeout: 5_000 });
   }
@@ -306,4 +316,14 @@ export class MobileCreateExperiencePage {
     await scrollFormTo(element);
     await moveToUpperScreen(element);
   }
+}
+
+/** Minutes since midnight of a time like "1:30 PM", to compare times in the starting-time list. */
+function minutesOfDay(time: string): number {
+  const match = time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if (!match) {
+    return 0;
+  }
+  const [, hours, minutes, period] = match;
+  return ((Number(hours) % 12) + (period.toUpperCase() === 'PM' ? 12 : 0)) * 60 + Number(minutes);
 }

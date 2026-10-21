@@ -181,6 +181,12 @@ export function byLabelContaining(text: string) {
   return browser.$(`//*[contains(@content-desc, ${xpathString(text)})]`);
 }
 
+/** All labels currently exposed on screen, e.g. to spot a message the app shows after a tap. */
+export async function screenLabels(): Promise<string[]> {
+  const source = await browser.getPageSource().catch(() => '');
+  return [...source.matchAll(/content-desc="([^"]+)"/g)].map((match) => match[1].replace(/&#10;/g, ' '));
+}
+
 /** Quote text for use inside an XPath expression. */
 export function xpathString(value: string): string {
   if (!value.includes('"')) {

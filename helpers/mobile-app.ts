@@ -51,15 +51,17 @@ export async function uploadFromGallery(imagePath: string, openPicker: () => Pro
 
   const newestPhoto = browser.$('(//*[starts-with(@content-desc, "Photo")])[1]');
   await newestPhoto.waitForDisplayed({ timeout: 60_000 });
-  // A tap while the picker is still loading can be ignored; tap again until the picker closes.
-  for (let tap = 1; tap <= 3; tap += 1) {
+  // On a slow emulator the picker ignores taps for a few seconds after its photos show (CI saw
+  // three taps 20 seconds apart all ignored): let it settle, then tap again until it closes.
+  await browser.pause(3_000);
+  for (let tap = 1; tap <= 5; tap += 1) {
     if (!(await newestPhoto.isDisplayed().catch(() => false))) {
       return;
     }
-    await newestPhoto.click();
-    await newestPhoto.waitForDisplayed({ reverse: true, timeout: 20_000 }).catch(() => {});
+    await browser.execute('mobile: clickGesture', { elementId: await newestPhoto.elementId }).catch(() => {});
+    await newestPhoto.waitForDisplayed({ reverse: true, timeout: 30_000 }).catch(() => {});
   }
-  await newestPhoto.waitForDisplayed({ reverse: true, timeout: 20_000 });
+  await newestPhoto.waitForDisplayed({ reverse: true, timeout: 30_000 });
 }
 
 /**
