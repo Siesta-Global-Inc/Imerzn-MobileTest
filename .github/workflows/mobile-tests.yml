@@ -10,14 +10,21 @@ on:
         required: false
         default: ''
 
+# One run at a time: runs share the dev site's test accounts. A new push cancels the running one.
+concurrency:
+  group: mobile-tests
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ubuntu-latest
     # Signups, experience creation and the booking flow on an emulator take a long time.
     timeout-minutes: 180
     permissions:
-      # Download the APK from the repo's releases.
-      contents: read
+      # Download the APK from the repo's releases, and push the report page to the gh-pages branch.
+      contents: write
+      # Check whether GitHub Pages is enabled before linking to the report page.
+      pages: read
 
     steps:
       - name: Checkout repository
@@ -107,29 +114,61 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
+      - name: Build report page
+        id: report
+        if: always()
+        run: |
+          LOG=mobile-test-results/wdio-output.log
+          if [ -f "$LOG" ]; then
+            # WebdriverIO's last line, e.g. "Spec Files: 17 passed, 2 failed, 19 total (100% completed) in 01:10:00".
+            SUMMARY=$(grep -a 'Spec Files:' "$LOG" | tail -1 | sed 's/^[[:space:]]*//;s/[[:space:]]\+/ /g')
+          else
+            SUMMARY="Tests did not run (failed before the test step)."
+          fi
+          echo "summary=$SUMMARY" >> "$GITHUB_OUTPUT"
+          # The repo is public, so the page is public: failed tests' errors (passwords masked),
+          # screenshots and the masked log only.
+          node scripts/failure-report.mjs mobile-test-results/failures.jsonl "$LOG" public-report "$SUMMARY"
+          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          REPO="${{ github.event.repository.name }}"
+          # Link to the page only if GitHub Pages is enabled (Settings > Pages, branch gh-pages);
+          # otherwise Slack links to the run. The page is pushed to gh-pages either way.
+          PAGES_STATUS=$(curl -s -o /dev/null -w '%{http_code}' -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pages")
+          if [ "$PAGES_STATUS" = "200" ]; then
+            echo "url=https://$OWNER.github.io/$REPO/reports/${{ github.run_id }}/" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::GitHub Pages is not enabled (HTTP $PAGES_STATUS); Slack will link to the run instead."
+          fi
+
+      - name: Publish report page to GitHub Pages
+        id: pages
+        if: always() && steps.report.outcome == 'success'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public-report
+          # One folder per run, so each Slack link keeps pointing at its own report.
+          destination_dir: reports/${{ github.run_id }}
+          keep_files: true
+
       - name: Notify Slack
-        # Runs after every job (pass or fail). On failure, each failed test's error and screenshot
-        # and the full log are posted in the message's thread. Needs the SLACK_BOT_TOKEN and
-        # SLACK_CHANNEL_ID repository secrets (see scripts/slack-report.mjs); with only
-        # SLACK_WEBHOOK_URL it posts the summary text.
+        # Runs after every job (pass or fail): the result, failed tests' names and the report link.
+        # Needs the SLACK_BOT_TOKEN and SLACK_CHANNEL_ID (or SLACK_WEBHOOK_URL) repository secrets.
         if: always()
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           TEST_OUTCOME: ${{ steps.tests.outcome }}
+          SUMMARY: ${{ steps.report.outputs.summary }}
+          REPORT_URL: ${{ steps.pages.outcome == 'success' && steps.report.outputs.url || '' }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           BRANCH: ${{ github.ref_name }}
           ACTOR: ${{ github.actor }}
         run: |
-          LOG=mobile-test-results/wdio-output.log
-          if [ -f "$LOG" ]; then
-            # WebdriverIO's last line, e.g. "Spec Files: 17 passed, 2 failed, 19 total (100% completed) in 01:10:00".
-            SUMMARY=$(grep -a 'Spec Files:' "$LOG" | tail -1 | sed 's/^[[:space:]]*//')
-          else
-            SUMMARY="Tests did not run (failed before the test step)."
-          fi
           node scripts/slack-report.mjs --name "Mobile tests" --outcome "$TEST_OUTCOME" --summary "$SUMMARY" \
-            --failures mobile-test-results/failures.jsonl --log "$LOG" \
+            --failures mobile-test-results/failures.jsonl --report-url "$REPORT_URL" \
             --run-url "$RUN_URL" --branch "$BRANCH" --actor "$ACTOR" \
             || echo "::warning::Slack notification failed (check the SLACK_* secrets)."

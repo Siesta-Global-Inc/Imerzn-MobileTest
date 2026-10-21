@@ -29,3 +29,6 @@ Desktop.ini
 
 # Local editor settings
 .vscode/
+
+# CI report page (published to GitHub Pages)
+public-report/
