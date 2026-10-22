@@ -60,8 +60,9 @@ export class MobileCreateProfilePage {
     return browser.$(`//android.widget.Button[@content-desc="${name}"]`);
   }
 
+  /** Zipcode field; its placeholder is "Zipcode" or (newer form) "Enter your zipcode". */
   get zipcodeInput() {
-    return inputByHint('Zipcode');
+    return browser.$('//android.widget.EditText[starts-with(@hint, "Zipcode") or contains(@hint, "zipcode")]');
   }
 
   async waitForLoaded(): Promise<void> {
@@ -109,7 +110,15 @@ export class MobileCreateProfilePage {
         throw new Error(`The location suggestion "${data.location}" was not shown.`);
       }
     }
-    await suggestion.click();
+    // On a slow emulator a tap on the list can be ignored (CI then tapped Submit with the list still
+    // open); tap again until the list closes.
+    for (let tap = 1; tap <= 3; tap += 1) {
+      await suggestion.click().catch(() => {});
+      if (await suggestion.waitForDisplayed({ reverse: true, timeout: 10_000 }).then(() => true, () => false)) {
+        return;
+      }
+    }
+    throw new Error(`The location suggestion "${data.location}" did not close after tapping it.`);
   }
 
   /** Localite: fill Bio, choose the experiences hosted, and enter the zipcode. */
