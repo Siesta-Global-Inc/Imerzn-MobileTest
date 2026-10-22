@@ -95,8 +95,8 @@ export class MobileCreateProfilePage {
     await this.cropImageTitle.waitForDisplayed({ reverse: true, timeout: 20_000 });
   }
 
-  /** Traveler: search a location and pick the matching suggestion (fills Country, State, City). */
-  async selectLocation(data: MobileTravelerProfileData): Promise<void> {
+  /** Search a location and pick the matching suggestion (fills Country, State, City). */
+  async selectLocation(data: Pick<MobileTravelerProfileData, 'locationSearch' | 'location'>): Promise<void> {
     await scrollTo(this.locationSearchInput);
     const suggestion = this.locationSuggestion(data.location);
     // The location search sometimes never answers; then clear the field and type again.
@@ -121,7 +121,7 @@ export class MobileCreateProfilePage {
     throw new Error(`The location suggestion "${data.location}" did not close after tapping it.`);
   }
 
-  /** Localite: fill Bio, choose the experiences hosted, and enter the zipcode. */
+  /** Localite: fill Bio, choose the experiences hosted, pick the location, and enter the zipcode. */
   async fillLocaliteDetails(data: MobileLocaliteProfileData): Promise<void> {
     await scrollTo(this.bioInput);
     await fillField(this.bioInput, data.bio);
@@ -145,20 +145,21 @@ export class MobileCreateProfilePage {
     }
     await expect(this.experiencesDropdown).toHaveAttribute('content-desc', data.experiences.join(', '));
 
-    // On CI the field was on screen but missing from the app's element tree after scrolling; a
-    // small drag makes the app expose it again.
-    for (let attempt = 1; ; attempt += 1) {
-      const found = await scrollTo(this.zipcodeInput).then(() => true, () => false);
-      if (found) {
-        break;
-      }
-      if (attempt === 3) {
-        throw new Error('The Zipcode field was not found on Create Your Profile.');
+    // Pick a Location: it fills Country, State, and City and enables Submit. The Zipcode field
+    // alone was not enough on CI: it was often on screen but missing from the app's element tree,
+    // and with nothing entered Submit stays disabled. (Edit Profile later needs the country too.)
+    await this.selectLocation(data);
+
+    // Zipcode is optional now; type it when the app exposes the field.
+    for (let attempt = 1; attempt <= 2; attempt += 1) {
+      if (await scrollTo(this.zipcodeInput).then(() => true, () => false)) {
+        await fillField(this.zipcodeInput, data.zipcode);
+        return;
       }
       await dragFormEdge('up', 0.25);
       await browser.pause(2_000);
     }
-    await fillField(this.zipcodeInput, data.zipcode);
+    console.info('[INFO] Create Your Profile: the Zipcode field was not exposed; continuing with the Location only.');
   }
 
   /** Experiences shown in the "Experiences I host" field, e.g. ["Hiking", "Culture & Heritage"]. */

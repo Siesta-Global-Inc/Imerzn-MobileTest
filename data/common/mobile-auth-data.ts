@@ -20,6 +20,9 @@ export interface MobileAuthData {
   localiteBio: string;
   localiteExperiences: string[];
   localiteZipcode: string;
+  /** "Localite Location (Search)", or the traveler's when not set. */
+  localiteLocationSearch: string;
+  localiteLocation: string;
 }
 
 /** Data typed into the mobile Sign Up form. */
@@ -44,6 +47,9 @@ export interface MobileLocaliteProfileData {
   bio: string;
   experiences: string[];
   zipcode: string;
+  /** Typed into "Search location..."; the suggestion matching location is picked. */
+  locationSearch: string;
+  location: string;
 }
 
 /** Read and validate auth.csv. */
@@ -70,6 +76,9 @@ export async function readMobileAuthData(): Promise<MobileAuthData> {
       .map((item) => item.trim())
       .filter(Boolean),
     localiteZipcode: get('Localite Zipcode'),
+    // Optional rows (the CI copy of auth.csv may not have them): fall back to the traveler's.
+    localiteLocationSearch: data.get('Localite Location Search') || get('Traveler Location Search'),
+    localiteLocation: data.get('Localite Location') || get('Traveler Location'),
   };
 }
 
@@ -98,6 +107,8 @@ export function createMobileLocaliteProfileData(authData: MobileAuthData): Mobil
     bio: authData.localiteBio,
     experiences: authData.localiteExperiences,
     zipcode: authData.localiteZipcode,
+    locationSearch: authData.localiteLocationSearch,
+    location: authData.localiteLocation,
   };
 }
 

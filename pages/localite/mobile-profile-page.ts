@@ -58,7 +58,14 @@ export class MobileProfilePage {
   /** Close the "Your profile has been updated!" popup; it covers the Profile screen. */
   async closeProfileUpdatedPopup(): Promise<void> {
     await this.returnToHomeButton.waitForDisplayed({ timeout: 60_000 });
-    await this.returnToHomeButton.click();
+    // A tap while the popup is still opening can be ignored (seen locally); tap again until it closes.
+    for (let tap = 1; tap <= 3; tap += 1) {
+      await browser.pause(1_500);
+      await this.returnToHomeButton.click().catch(() => {});
+      if (await this.returnToHomeButton.waitForDisplayed({ reverse: true, timeout: 15_000 }).then(() => true, () => false)) {
+        return;
+      }
+    }
     await this.returnToHomeButton.waitForDisplayed({ reverse: true });
   }
 
