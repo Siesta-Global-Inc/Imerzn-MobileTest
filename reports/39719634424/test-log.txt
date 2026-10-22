@@ -1,0 +1,97 @@
+
+> imerzn-playwright-framework@1.0.0 mobile:test
+> wdio run mobile-wdio.conf.ts
+
+
+Execution of 19 workers started at 2026-10-22T03:59:21.545Z
+
+[0-0] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-0] [STEP] Log in with an unregistered email
+[0-0] [STEP] Verify the login error message
+[0-0] [STEP] Log in with a registered account
+[0-0] [STEP] Verify the Profile screen
+[0-0] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-1] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-1] [DATA] Traveler email: autotraveler+476298@yopmail.com
+[0-1] [STEP] Open Sign Up as a Traveler
+[0-1] [STEP] Fill in and submit the signup form
+[0-1] [STEP] Verify OTP number
+[0-1] [STEP] Upload and save profile picture
+[0-1] 2026-10-22T04:01:35.094Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T04:01:35.289Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] [STEP] Select location and submit profile
+[0-1] 2026-10-22T04:01:43.308Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T04:01:43.457Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T04:01:46.245Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T04:01:46.662Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] [STEP] Verify the traveler is signed in
+[0-1] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-2] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] [DATA] Localite email: autolocalite+727836@yopmail.com
+[0-2] [STEP] Sign up as a new Localite
+[0-2] [STEP] Verify phone number
+[0-2] [STEP] Create the localite profile
+[0-2] 2026-10-22T04:02:37.926Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] 2026-10-22T04:02:38.157Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] [STEP] Close the profile updated popup
+[0-2] [STEP] Sign in to the admin portal
+[0-2] [STEP] Open the new localite in admin Users
+[0-2] [STEP] Mark the localite as Verified
+[0-2] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-3] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] [DATA] Localite email: autolocalite+727836@yopmail.com
+[0-3] [DATA] Experience title: Mobile-Automation Experience - 71464
+[0-3] [STEP] Log in as localite
+[0-3] [STEP] Fill in the Create Experience form
+[0-3] 2026-10-22T04:03:56.226Z WARN webdriver: Request encountered a stale element - terminating request
+[0-3] 2026-10-22T04:03:56.468Z WARN webdriver: Request encountered a stale element - terminating request
+[0-3] [STEP] Recheck Know Before You Go and tap Price
+[0-3] [STEP] Publish the experience
+[0-3] [STEP] Verify the experience on the Profile
+[0-3] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-4] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] [DATA] Localite email: autolocalite+727836@yopmail.com
+[0-4] [DATA] Gallery title: Mobile-Gallery 446036
+[0-4] [STEP] Log in as localite
+[0-4] [STEP] Fill in the Create Gallery form
+[0-4] 2026-10-22T04:06:50.733Z WARN webdriver: Request encountered a stale element - terminating request
+[0-4] 2026-10-22T04:06:51.205Z WARN webdriver: Request encountered a stale element - terminating request
+[0-4] [STEP] Save the gallery
+[0-4] [STEP] Verify the gallery on the Profile
+[0-4] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] [DATA] Localite email: autolocalite+727836@yopmail.com
+[0-5] [DATA] New localite name: Phuong Autoajggst
+[0-5] [STEP] Log in as localite
+[0-5] [STEP] Edit name, bio, and experiences
+[0-5] [STEP] Save the profile
+[0-5] [FAILED] Save the profile: The profile was not saved: still on "Edit Profile" after Save (app message: "Please select the county").
+[0-5] Error in "mobile-edit-profile.mobile PRF-002 | Localite edits name, bio, and hosted experiences"
+Error: Step "Save the profile" failed: The profile was not saved: still on "Edit Profile" after Save (app message: "Please select the county").
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:37:5)
+[0-5] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] [DATA] Localite email: autolocalite+727836@yopmail.com
+[0-5] [DATA] New localite name: Phuong Autoeowyfi
+[0-5] [STEP] Log in as localite
+[0-5] [STEP] Edit name, bio, and experiences
+[0-5] [STEP] Save the profile
+[0-5] [FAILED] Save the profile: The profile was not saved: still on "Edit Profile" after Save (app message: "Please select the county").
+[0-5] Error in "mobile-edit-profile.mobile PRF-002 | Localite edits name, bio, and hosted experiences"
+Error: Step "Save the profile" failed: The profile was not saved: still on "Edit Profile" after Save (app message: "Please select the county").
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:37:5)
+[0-5] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts (1 retries)
+[0-6] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] [DATA] Localite email: autolocalite+727836@yopmail.com
+[0-6] [STEP] Log in as localite
+[0-6] [STEP] Open Preview Profile
+[0-6] [STEP] Verify profile details on the preview
+[0-6] [STEP] Verify the created gallery and experience
+[0-6] [STEP] Go back to the Profile
+[0-6] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-7] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] [DATA] Localite email: autolocalite+727836@yopmail.com
+[0-7] [STEP] Log in as localite
+[0-7] [STEP] Open the share sheet
