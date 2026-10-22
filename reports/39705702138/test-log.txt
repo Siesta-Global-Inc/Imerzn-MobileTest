@@ -1,0 +1,727 @@
+
+> imerzn-playwright-framework@1.0.0 mobile:test
+> wdio run mobile-wdio.conf.ts
+
+
+Execution of 19 workers started at 2026-10-22T01:28:48.134Z
+
+[0-0] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-0] [STEP] Log in with an unregistered email
+[0-0] [STEP] Verify the login error message
+[0-0] [STEP] Log in with a registered account
+[0-0] [STEP] Verify the Profile screen
+[0-0] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-1] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-1] [DATA] Traveler email: autotraveler+166590@yopmail.com
+[0-1] [STEP] Open Sign Up as a Traveler
+[0-1] [STEP] Fill in and submit the signup form
+[0-1] [STEP] Verify OTP number
+[0-1] [STEP] Upload and save profile picture
+[0-1] 2026-10-22T01:30:35.009Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T01:30:36.233Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] [STEP] Select location and submit profile
+[0-1] 2026-10-22T01:30:51.882Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T01:30:52.056Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T01:30:57.831Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-10-22T01:30:58.424Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] [STEP] Verify the traveler is signed in
+[0-1] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-2] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] [DATA] Localite email: autolocalite+783749@yopmail.com
+[0-2] [STEP] Sign up as a new Localite
+[0-2] [STEP] Verify phone number
+[0-2] [STEP] Create the localite profile
+[0-2] 2026-10-22T01:31:36.885Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] 2026-10-22T01:31:37.106Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] [FAILED] Create the localite profile: element ("//android.widget.EditText[starts-with(@hint, "Zipcode") or contains(@hint, "zipcode")]") still not displayed after 5000ms
+[0-2] Error in "mobile-localite-signup-and-verify.mobile LOC-001 | New localite signs up and is verified by an admin"
+Error: Step "Create the localite profile" failed: element ("//android.widget.EditText[starts-with(@hint, "Zipcode") or contains(@hint, "zipcode")]") still not displayed after 5000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts:58:5)
+[0-2] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] [DATA] Localite email: autolocalite+180402@yopmail.com
+[0-2] [STEP] Sign up as a new Localite
+[0-2] [STEP] Verify phone number
+[0-2] [FAILED] Verify phone number: element ("//*[starts-with(@content-desc, "Create Your Profile")]") still not displayed after 60000ms
+[0-2] Error in "mobile-localite-signup-and-verify.mobile LOC-001 | New localite signs up and is verified by an admin"
+Error: Step "Verify phone number" failed: element ("//*[starts-with(@content-desc, "Create Your Profile")]") still not displayed after 60000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts:52:5)
+[0-2] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts (1 retries)
+[0-3] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] Error in "mobile-create-experience.mobile EXP-002 | Localite creates and publishes an experience"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts:15:28)
+[0-3] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] Error in "mobile-create-experience.mobile EXP-002 | Localite creates and publishes an experience"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts:15:28)
+[0-3] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts (1 retries)
+[0-4] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] Error in "mobile-create-gallery.mobile GAL-001 | Localite creates a gallery and it appears on the profile"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts:12:28)
+[0-4] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] Error in "mobile-create-gallery.mobile GAL-001 | Localite creates a gallery and it appears on the profile"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts:12:28)
+[0-4] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts (1 retries)
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] Error in "mobile-edit-profile.mobile PRF-002 | Localite edits name, bio, and hosted experiences"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:12:28)
+[0-5] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] Error in "mobile-edit-profile.mobile PRF-002 | Localite edits name, bio, and hosted experiences"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:12:28)
+[0-5] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts (1 retries)
+[0-6] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] Error in "mobile-preview-profile.mobile PRF-001 | Localite previews the profile and goes back"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts:12:28)
+[0-6] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] Error in "mobile-preview-profile.mobile PRF-001 | Localite previews the profile and goes back"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts:12:28)
+[0-6] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts (1 retries)
+[0-7] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] Error in "mobile-share-profile.mobile PRF-003 | Localite opens and closes the share sheet from the profile"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts:10:28)
+[0-7] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] Error in "mobile-share-profile.mobile PRF-003 | Localite opens and closes the share sheet from the profile"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts:10:28)
+[0-7] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts (1 retries)
+[0-8] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-8] Error in "mobile-left-menu.mobile MENU-001 | Localite opens each item of the left menu"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts:14:28)
+[0-8] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-8] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-8] Error in "mobile-left-menu.mobile MENU-001 | Localite opens each item of the left menu"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts:14:28)
+[0-8] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts (1 retries)
+[0-9] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-9] Error in "mobile-localite-settings.mobile SET-002 | Localite changes the password and logs in with it"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts:13:28)
+[0-9] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-9] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-9] Error in "mobile-localite-settings.mobile SET-002 | Localite changes the password and logs in with it"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts:13:28)
+[0-9] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts (1 retries)
+[0-10] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-10] [DATA] Referrer: phuonglocalite15@yopmail.com, referee: phuongReferee1@yopmail.com, traveler: travelerReferal@yopmail.com
+[0-10] [STEP] Referrer: check Referral History
+[0-10] [DATA] Referral History before: Referral % 25%, Total Earned $116, Withdrawable $100, Status Active, Withdraw button shown
+[0-10] [STEP] Referee: check a completable booking in Transactions
+[0-10] [SKIPPED] No paid On Going booking could be completed yet ("Complete Booking" appears only after the booking's start time), so the referral earning and withdraw checks were skipped this run.
+[0-10] [STEP] Referee: complete the booking
+[0-10] [STEP] Referrer: verify the new Withdrawable and Total Earned
+[0-10] [STEP] Referrer: withdraw the earnings
+[0-10] [STEP] Traveler: open "Experience For Referral"
+[0-10] 2026-10-22T01:37:51.195Z WARN webdriver: Request encountered a stale element - terminating request
+[0-10] 2026-10-22T01:37:51.345Z WARN webdriver: Request encountered a stale element - terminating request
+[0-10] [STEP] Traveler: book the experience
+[0-10] [DATA] Booked: Thu Oct 22 2026 9:00 AM, 2 people
+[0-10] [STEP] Traveler: pay for the booking
+[0-10] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-11] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] [DATA] Traveler email: autotraveler+166590@yopmail.com
+[0-11] [DATA] Story title: Mobile-My Story 358892
+[0-11] [STEP] Log in as traveler
+[0-11] [STEP] Fill in the story
+[0-11] 2026-10-22T01:40:19.617Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] 2026-10-22T01:40:19.763Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] [STEP] Submit the story
+[0-11] [STEP] Open Stories
+[0-11] [STEP] Verify the story in My Stories
+[0-11] [FAILED] Verify the story in My Stories: element ("(//*[contains(@content-desc, "Mobile-My Story 358892") and @displayed="true"])[1]") still not displayed after 5000ms
+[0-11] Error in "mobile-stories.mobile STR-001 | Traveler shares a story after login and it appears in Stories"
+Error: Step "Verify the story in My Stories" failed: element ("(//*[contains(@content-desc, "Mobile-My Story 358892") and @displayed="true"])[1]") still not displayed after 5000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts:57:5)
+[0-11] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] [DATA] Traveler email: autotraveler+166590@yopmail.com
+[0-11] [DATA] Story title: Mobile-My Story 233951
+[0-11] [STEP] Log in as traveler
+[0-11] [STEP] Fill in the story
+[0-11] 2026-10-22T01:42:46.421Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] 2026-10-22T01:42:47.090Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] [STEP] Submit the story
+[0-11] 2026-10-22T01:43:01.113Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] 2026-10-22T01:43:01.205Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] [STEP] Open Stories
+[0-11] [STEP] Verify the story in My Stories
+[0-11] [STEP] Verify the story in public Stories
+[0-11] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts (1 retries)
+[0-12] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts
+[0-12] [DATA] Traveler email: autotraveler+166590@yopmail.com
+[0-12] [STEP] Log in as traveler
+[0-12] 2026-10-22T01:43:32.553Z WARN webdriver: Request encountered a stale element - terminating request
+[0-12] 2026-10-22T01:43:32.614Z WARN webdriver: Request encountered a stale element - terminating request
+[0-12] [STEP] Edit name and phone
+[0-12] [STEP] Verify the saved details
+[0-12] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts
+[0-13] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts
+[0-13] [DATA] Traveler email: autotraveler+166590@yopmail.com
+[0-13] [DATA] Wishlist name: Mobile-Wishlist 664806
+[0-13] [STEP] Log in as traveler
+[0-13] 2026-10-22T01:44:05.137Z WARN webdriver: Request encountered a stale element - terminating request
+[0-13] 2026-10-22T01:44:05.312Z WARN webdriver: Request encountered a stale element - terminating request
+[0-13] [STEP] Create a wishlist
+[0-13] [STEP] Open Experiences
+[0-13] [DATA] Experience: Mobile-Automation Experience - 50707
+[0-13] [STEP] Save the experience to the wishlist
+[0-13] [STEP] Verify the experience in the wishlist
+[0-13] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts
+[0-14] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-14] Error in "mobile-flow-booking.mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:29:28)
+[0-14] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-14] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-14] Error in "mobile-flow-booking.mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:29:28)
+[0-14] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts (1 retries)
+[0-15] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-15] Error in "mobile-flow-traveler-bookings.mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"
+Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)
+[0-15] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-15] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-15] Error in "mobile-flow-traveler-bookings.mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"
+Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)
+[0-15] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts (1 retries)
+[0-16] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-16] Error in "mobile-flow-localite-bookings.mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:20:28)
+[0-16] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-16] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-16] Error in "mobile-flow-localite-bookings.mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:20:28)
+[0-16] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts (1 retries)
+[0-17] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-17] Error in "mobile-flow-traveler-cancel.mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:20:28)
+[0-17] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-17] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-17] Error in "mobile-flow-traveler-cancel.mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:20:28)
+[0-17] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts (1 retries)
+[0-18] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] Error in "mobile-flow-localite-cancel.mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:19:28)
+[0-18] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] Error in "mobile-flow-localite-cancel.mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled"
+Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:19:28)
+[0-18] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts (1 retries)
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[app-debug.apk Android #0-0] Running: app-debug.apk on Android
+[app-debug.apk Android #0-0] Session ID: 1ebeddcf-3261-4dfc-b9fc-b8f85a36670f
+[app-debug.apk Android #0-0]
+[app-debug.apk Android #0-0] » tests/auth/mobile-login.spec.ts
+[app-debug.apk Android #0-0] mobile-login
+[app-debug.apk Android #0-0]    ✓ mobile AUTH-001 | Login fails with an unregistered email
+[app-debug.apk Android #0-0]    ✓ mobile AUTH-002 | Registered user can access the Profile screen
+[app-debug.apk Android #0-0]
+[app-debug.apk Android #0-0] 2 passing (32s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-1] Running: app-debug.apk on Android
+[app-debug.apk Android #0-1] Session ID: 2c7ba1f0-2ac0-4b42-afcb-9630f6860668
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] » tests/auth/mobile-traveler-signup.spec.ts
+[app-debug.apk Android #0-1] mobile-traveler-signup
+[app-debug.apk Android #0-1]    ✓ mobile AUTH-003 | Traveler can complete the signup process
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] 1 passing (59.6s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-2] Running: app-debug.apk on Android
+[app-debug.apk Android #0-2] Session ID: 669d50d1-e7b2-4083-8773-a02759ca533e
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] » tests/auth/mobile-localite-signup-and-verify.spec.ts
+[app-debug.apk Android #0-2] mobile-localite-signup-and-verify
+[app-debug.apk Android #0-2]    ✖ mobile LOC-001 | New localite signs up and is verified by an admin
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] 1 failing (56.1s)
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] 1) mobile-localite-signup-and-verify mobile LOC-001 | New localite signs up and is verified by an admin
+[app-debug.apk Android #0-2] Step "Create the localite profile" failed: element ("//android.widget.EditText[starts-with(@hint, "Zipcode") or contains(@hint, "zipcode")]") still not displayed after 5000ms
+[app-debug.apk Android #0-2] Error: Step "Create the localite profile" failed: element ("//android.widget.EditText[starts-with(@hint, "Zipcode") or contains(@hint, "zipcode")]") still not displayed after 5000ms
+[app-debug.apk Android #0-2]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-2]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts:58:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-2] Running: app-debug.apk on Android
+[app-debug.apk Android #0-2] Session ID: 2520b613-75d6-4a68-b3f9-25e46929c0b4
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] » tests/auth/mobile-localite-signup-and-verify.spec.ts
+[app-debug.apk Android #0-2] mobile-localite-signup-and-verify
+[app-debug.apk Android #0-2]    ✖ mobile LOC-001 | New localite signs up and is verified by an admin
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] 1 failing (1m 19.7s)
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] 1) mobile-localite-signup-and-verify mobile LOC-001 | New localite signs up and is verified by an admin
+[app-debug.apk Android #0-2] Step "Verify phone number" failed: element ("//*[starts-with(@content-desc, "Create Your Profile")]") still not displayed after 60000ms
+[app-debug.apk Android #0-2] Error: Step "Verify phone number" failed: element ("//*[starts-with(@content-desc, "Create Your Profile")]") still not displayed after 60000ms
+[app-debug.apk Android #0-2]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-2]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts:52:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-3] Running: app-debug.apk on Android
+[app-debug.apk Android #0-3] Session ID: a28df2e6-f806-449a-ae34-897e89ec04a1
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] » tests/localite/mobile-create-experience.spec.ts
+[app-debug.apk Android #0-3] mobile-create-experience
+[app-debug.apk Android #0-3]    ✖ mobile EXP-002 | Localite creates and publishes an experience
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] 1 failing (2.4s)
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] 1) mobile-create-experience mobile EXP-002 | Localite creates and publishes an experience
+[app-debug.apk Android #0-3] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-3] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-3]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-3]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts:15:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-3] Running: app-debug.apk on Android
+[app-debug.apk Android #0-3] Session ID: c40015ff-6c13-438e-a63f-af33c6f6d78b
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] » tests/localite/mobile-create-experience.spec.ts
+[app-debug.apk Android #0-3] mobile-create-experience
+[app-debug.apk Android #0-3]    ✖ mobile EXP-002 | Localite creates and publishes an experience
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] 1 failing (1.9s)
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] 1) mobile-create-experience mobile EXP-002 | Localite creates and publishes an experience
+[app-debug.apk Android #0-3] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-3] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-3]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-3]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts:15:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-4] Running: app-debug.apk on Android
+[app-debug.apk Android #0-4] Session ID: dd4dbd95-278b-4e84-b5f9-0c970925aa8c
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] » tests/localite/mobile-create-gallery.spec.ts
+[app-debug.apk Android #0-4] mobile-create-gallery
+[app-debug.apk Android #0-4]    ✖ mobile GAL-001 | Localite creates a gallery and it appears on the profile
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] 1 failing (2.8s)
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] 1) mobile-create-gallery mobile GAL-001 | Localite creates a gallery and it appears on the profile
+[app-debug.apk Android #0-4] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-4] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-4]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-4]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts:12:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-4] Running: app-debug.apk on Android
+[app-debug.apk Android #0-4] Session ID: dc1e7fa5-9f24-4605-b81e-8897c5a17a57
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] » tests/localite/mobile-create-gallery.spec.ts
+[app-debug.apk Android #0-4] mobile-create-gallery
+[app-debug.apk Android #0-4]    ✖ mobile GAL-001 | Localite creates a gallery and it appears on the profile
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] 1 failing (2.6s)
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] 1) mobile-create-gallery mobile GAL-001 | Localite creates a gallery and it appears on the profile
+[app-debug.apk Android #0-4] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-4] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-4]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-4]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts:12:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-5] Running: app-debug.apk on Android
+[app-debug.apk Android #0-5] Session ID: 88c61a83-1295-4f2a-a933-1d988fee739f
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] » tests/localite/mobile-edit-profile.spec.ts
+[app-debug.apk Android #0-5] mobile-edit-profile
+[app-debug.apk Android #0-5]    ✖ mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1 failing (1.7s)
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1) mobile-edit-profile mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-5] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-5]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-5]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:12:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-5] Running: app-debug.apk on Android
+[app-debug.apk Android #0-5] Session ID: 6c17581b-d868-467c-ba41-e03ef8f8e9fc
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] » tests/localite/mobile-edit-profile.spec.ts
+[app-debug.apk Android #0-5] mobile-edit-profile
+[app-debug.apk Android #0-5]    ✖ mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1 failing (2.5s)
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1) mobile-edit-profile mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-5] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-5]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-5]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:12:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-6] Running: app-debug.apk on Android
+[app-debug.apk Android #0-6] Session ID: b41e179c-2882-47b1-ad3b-ce76312288cb
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] » tests/localite/mobile-preview-profile.spec.ts
+[app-debug.apk Android #0-6] mobile-preview-profile
+[app-debug.apk Android #0-6]    ✖ mobile PRF-001 | Localite previews the profile and goes back
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] 1 failing (2.6s)
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] 1) mobile-preview-profile mobile PRF-001 | Localite previews the profile and goes back
+[app-debug.apk Android #0-6] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-6] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-6]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-6]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts:12:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-6] Running: app-debug.apk on Android
+[app-debug.apk Android #0-6] Session ID: 362f8e16-af7d-448b-b37c-f94359509002
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] » tests/localite/mobile-preview-profile.spec.ts
+[app-debug.apk Android #0-6] mobile-preview-profile
+[app-debug.apk Android #0-6]    ✖ mobile PRF-001 | Localite previews the profile and goes back
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] 1 failing (3.1s)
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] 1) mobile-preview-profile mobile PRF-001 | Localite previews the profile and goes back
+[app-debug.apk Android #0-6] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-6] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-6]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-6]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts:12:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-7] Running: app-debug.apk on Android
+[app-debug.apk Android #0-7] Session ID: d0a087ff-c4ef-4f35-b9ec-88a430e8d4d2
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] » tests/localite/mobile-share-profile.spec.ts
+[app-debug.apk Android #0-7] mobile-share-profile
+[app-debug.apk Android #0-7]    ✖ mobile PRF-003 | Localite opens and closes the share sheet from the profile
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] 1 failing (2.6s)
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] 1) mobile-share-profile mobile PRF-003 | Localite opens and closes the share sheet from the profile
+[app-debug.apk Android #0-7] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-7] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-7]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-7]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts:10:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-7] Running: app-debug.apk on Android
+[app-debug.apk Android #0-7] Session ID: 837b5b2a-47e6-45bf-9ff0-b4cfe720aff0
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] » tests/localite/mobile-share-profile.spec.ts
+[app-debug.apk Android #0-7] mobile-share-profile
+[app-debug.apk Android #0-7]    ✖ mobile PRF-003 | Localite opens and closes the share sheet from the profile
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] 1 failing (2.4s)
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] 1) mobile-share-profile mobile PRF-003 | Localite opens and closes the share sheet from the profile
+[app-debug.apk Android #0-7] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-7] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-7]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-7]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts:10:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-8] Running: app-debug.apk on Android
+[app-debug.apk Android #0-8] Session ID: 01d20f1a-1485-4094-9ed0-eda8696afc9c
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] » tests/localite/mobile-left-menu.spec.ts
+[app-debug.apk Android #0-8] mobile-left-menu
+[app-debug.apk Android #0-8]    ✖ mobile MENU-001 | Localite opens each item of the left menu
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] 1 failing (2.8s)
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] 1) mobile-left-menu mobile MENU-001 | Localite opens each item of the left menu
+[app-debug.apk Android #0-8] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-8] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-8]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-8]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts:14:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-8] Running: app-debug.apk on Android
+[app-debug.apk Android #0-8] Session ID: 6e8b4334-1cc9-4576-a2b7-e6cf858b0836
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] » tests/localite/mobile-left-menu.spec.ts
+[app-debug.apk Android #0-8] mobile-left-menu
+[app-debug.apk Android #0-8]    ✖ mobile MENU-001 | Localite opens each item of the left menu
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] 1 failing (2.6s)
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] 1) mobile-left-menu mobile MENU-001 | Localite opens each item of the left menu
+[app-debug.apk Android #0-8] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-8] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-8]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-8]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts:14:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-9] Running: app-debug.apk on Android
+[app-debug.apk Android #0-9] Session ID: 354ccaba-2e71-471a-b003-b07c8b7c3fe7
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] » tests/localite/mobile-localite-settings.spec.ts
+[app-debug.apk Android #0-9] mobile-localite-settings
+[app-debug.apk Android #0-9]    ✖ mobile SET-002 | Localite changes the password and logs in with it
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] 1 failing (2.9s)
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] 1) mobile-localite-settings mobile SET-002 | Localite changes the password and logs in with it
+[app-debug.apk Android #0-9] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-9] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-9]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-9]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts:13:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-9] Running: app-debug.apk on Android
+[app-debug.apk Android #0-9] Session ID: b8fcc103-12e7-47b9-bed0-5169ae0572b1
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] » tests/localite/mobile-localite-settings.spec.ts
+[app-debug.apk Android #0-9] mobile-localite-settings
+[app-debug.apk Android #0-9]    ✖ mobile SET-002 | Localite changes the password and logs in with it
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] 1 failing (2.3s)
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] 1) mobile-localite-settings mobile SET-002 | Localite changes the password and logs in with it
+[app-debug.apk Android #0-9] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-9] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-9]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-9]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts:13:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-10] Running: app-debug.apk on Android
+[app-debug.apk Android #0-10] Session ID: ce52febd-901d-4159-a4d5-5faa45131ccb
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] » tests/localite/mobile-referral-program.spec.ts
+[app-debug.apk Android #0-10] mobile-referral-program
+[app-debug.apk Android #0-10]    ✓ mobile REF-001 | Referral program: referrer earns Referral % of the commission and withdraws it
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] 1 passing (3m 16.7s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-11] Running: app-debug.apk on Android
+[app-debug.apk Android #0-11] Session ID: d3781be1-86ca-4c19-b130-000ce5041c58
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] » tests/traveler/mobile-stories.spec.ts
+[app-debug.apk Android #0-11] mobile-stories
+[app-debug.apk Android #0-11]    ✖ mobile STR-001 | Traveler shares a story after login and it appears in Stories
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] 1 failing (2m 24.6s)
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] 1) mobile-stories mobile STR-001 | Traveler shares a story after login and it appears in Stories
+[app-debug.apk Android #0-11] Step "Verify the story in My Stories" failed: element ("(//*[contains(@content-desc, "Mobile-My Story 358892") and @displayed="true"])[1]") still not displayed after 5000ms
+[app-debug.apk Android #0-11] Error: Step "Verify the story in My Stories" failed: element ("(//*[contains(@content-desc, "Mobile-My Story 358892") and @displayed="true"])[1]") still not displayed after 5000ms
+[app-debug.apk Android #0-11]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-11]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts:57:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-11] Running: app-debug.apk on Android
+[app-debug.apk Android #0-11] Session ID: 3c2eb63b-8990-4f4e-9bff-8b1d3adda4c1
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] » tests/traveler/mobile-stories.spec.ts
+[app-debug.apk Android #0-11] mobile-stories
+[app-debug.apk Android #0-11]    ✓ mobile STR-001 | Traveler shares a story after login and it appears in Stories
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] 1 passing (43.7s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-12] Running: app-debug.apk on Android
+[app-debug.apk Android #0-12] Session ID: 593db193-c586-4dc9-b4c3-f45feae747c8
+[app-debug.apk Android #0-12]
+[app-debug.apk Android #0-12] » tests/traveler/mobile-edit-profile.spec.ts
+[app-debug.apk Android #0-12] mobile-traveler-edit-profile
+[app-debug.apk Android #0-12]    ✓ mobile SET-001 | Traveler edits name and phone on Edit Profile
+[app-debug.apk Android #0-12]
+[app-debug.apk Android #0-12] 1 passing (29.5s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-13] Running: app-debug.apk on Android
+[app-debug.apk Android #0-13] Session ID: f120b7e8-1167-4c48-973b-77b4273bc27d
+[app-debug.apk Android #0-13]
+[app-debug.apk Android #0-13] » tests/traveler/mobile-wishlist.spec.ts
+[app-debug.apk Android #0-13] mobile-wishlist
+[app-debug.apk Android #0-13]    ✓ mobile WSH-001 | Traveler creates a wishlist and saves an experience to it
+[app-debug.apk Android #0-13]
+[app-debug.apk Android #0-13] 1 passing (34.4s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-14] Running: app-debug.apk on Android
+[app-debug.apk Android #0-14] Session ID: 85eb6b13-87d9-450e-ba78-2d3154aea764
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] » tests/flows/booking/mobile-01-experience-booking.spec.ts
+[app-debug.apk Android #0-14] mobile-flow-booking
+[app-debug.apk Android #0-14]    ✖ mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] 1 failing (776ms)
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] 1) mobile-flow-booking mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending
+[app-debug.apk Android #0-14] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-14] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-14]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-14]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:29:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-14] Running: app-debug.apk on Android
+[app-debug.apk Android #0-14] Session ID: d2c824ca-27f9-4a1e-877a-e4c58fbf98ad
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] » tests/flows/booking/mobile-01-experience-booking.spec.ts
+[app-debug.apk Android #0-14] mobile-flow-booking
+[app-debug.apk Android #0-14]    ✖ mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] 1 failing (781ms)
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] 1) mobile-flow-booking mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending
+[app-debug.apk Android #0-14] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-14] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-14]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-14]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:29:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-15] Running: app-debug.apk on Android
+[app-debug.apk Android #0-15] Session ID: 03246f05-076c-49d8-9cb7-ab3b7a8ff4c0
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] » tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[app-debug.apk Android #0-15] mobile-flow-traveler-bookings
+[app-debug.apk Android #0-15]    ✖ mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] 1 failing (1s)
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] 1) mobile-flow-traveler-bookings mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings
+[app-debug.apk Android #0-15] No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+[app-debug.apk Android #0-15] Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+[app-debug.apk Android #0-15]     at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+[app-debug.apk Android #0-15]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)
+------------------------------------------------------------------
+[app-debug.apk Android #0-15] Running: app-debug.apk on Android
+[app-debug.apk Android #0-15] Session ID: 2a26416d-7a67-438d-aa8f-08cb2385e5a6
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] » tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[app-debug.apk Android #0-15] mobile-flow-traveler-bookings
+[app-debug.apk Android #0-15]    ✖ mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] 1 failing (880ms)
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] 1) mobile-flow-traveler-bookings mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings
+[app-debug.apk Android #0-15] No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+[app-debug.apk Android #0-15] Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+[app-debug.apk Android #0-15]     at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+[app-debug.apk Android #0-15]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)
+------------------------------------------------------------------
+[app-debug.apk Android #0-16] Running: app-debug.apk on Android
+[app-debug.apk Android #0-16] Session ID: 5f7c302e-fb8b-4b18-91f9-8bbae4b791d6
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] » tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[app-debug.apk Android #0-16] mobile-flow-localite-bookings
+[app-debug.apk Android #0-16]    ✖ mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] 1 failing (824ms)
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] 1) mobile-flow-localite-bookings mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings
+[app-debug.apk Android #0-16] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-16] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-16]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-16]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:20:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-16] Running: app-debug.apk on Android
+[app-debug.apk Android #0-16] Session ID: 5e20afc3-91e0-437d-8192-5ceb4e53d068
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] » tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[app-debug.apk Android #0-16] mobile-flow-localite-bookings
+[app-debug.apk Android #0-16]    ✖ mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] 1 failing (806ms)
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] 1) mobile-flow-localite-bookings mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings
+[app-debug.apk Android #0-16] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-16] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-16]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-16]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:20:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-17] Running: app-debug.apk on Android
+[app-debug.apk Android #0-17] Session ID: c5b1c63a-bd77-4754-84e7-f5af41ad57bb
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] » tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[app-debug.apk Android #0-17] mobile-flow-traveler-cancel
+[app-debug.apk Android #0-17]    ✖ mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] 1 failing (801ms)
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] 1) mobile-flow-traveler-cancel mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled
+[app-debug.apk Android #0-17] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-17] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-17]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-17]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:20:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-17] Running: app-debug.apk on Android
+[app-debug.apk Android #0-17] Session ID: 5300b36f-51a1-4f18-aaf2-a01d5b726fa8
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] » tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[app-debug.apk Android #0-17] mobile-flow-traveler-cancel
+[app-debug.apk Android #0-17]    ✖ mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] 1 failing (1s)
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] 1) mobile-flow-traveler-cancel mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled
+[app-debug.apk Android #0-17] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-17] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-17]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-17]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:20:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-18] Running: app-debug.apk on Android
+[app-debug.apk Android #0-18] Session ID: cb0bdd82-fba7-48b9-a20f-d0e58da7c525
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] » tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[app-debug.apk Android #0-18] mobile-flow-localite-cancel
+[app-debug.apk Android #0-18]    ✖ mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] 1 failing (778ms)
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] 1) mobile-flow-localite-cancel mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled
+[app-debug.apk Android #0-18] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-18] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-18]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-18]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:19:28)
+------------------------------------------------------------------
+[app-debug.apk Android #0-18] Running: app-debug.apk on Android
+[app-debug.apk Android #0-18] Session ID: bff48d73-caeb-40f0-b876-574a3207fd32
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] » tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[app-debug.apk Android #0-18] mobile-flow-localite-cancel
+[app-debug.apk Android #0-18]    ✖ mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] 1 failing (742ms)
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] 1) mobile-flow-localite-cancel mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled
+[app-debug.apk Android #0-18] No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-18] Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+[app-debug.apk Android #0-18]     at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+[app-debug.apk Android #0-18]     at Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:19:28)
+
+
+Spec Files:	 6 passed, 14 retries, 13 failed, 19 total (100% completed) in 00:16:17  
+
