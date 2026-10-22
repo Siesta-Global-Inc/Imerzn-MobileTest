@@ -1,4 +1,4 @@
-import { byLabelStart, fillField, inputByHint, centerOnScreen, openTab, scrollTo, xpathString } from '@helpers/mobile-elements';
+import { byLabelStart, fillField, inputByHint, openTab, scrollTo, xpathString } from '@helpers/mobile-elements';
 
 /**
  * Localite "Bookings" tab. Each booking is a view labelled "Booking ID: <id>"; inside it are
@@ -119,7 +119,27 @@ export class MobileLocaliteBookingsPage {
       await scrollTo(this.card(bookingId), 'down', 12).catch(async () => scrollTo(this.card(bookingId), 'up', 12));
     }
     // A card found while scrolling can be cut off at the screen edge (on CI Chat was below it):
-    // move its top line into the upper half, which brings the buttons under it on screen.
-    await centerOnScreen((await travelerLine.isDisplayed().catch(() => false)) ? travelerLine : this.card(bookingId));
+    // move its top into the upper half, which brings the buttons under it on screen. The drag is
+    // in the middle of the list: the screen's left edge (used by centerOnScreen) is outside this
+    // list and does not scroll it.
+    const { width, height } = await browser.getWindowSize();
+    for (let drag = 0; drag < 3; drag += 1) {
+      const { y } = await this.card(bookingId).getLocation();
+      if (y <= height * 0.55) {
+        return;
+      }
+      const x = Math.round(width / 2);
+      await browser
+        .action('pointer', { parameters: { pointerType: 'touch' } })
+        .move({ x, y: Math.round(height * 0.7) })
+        .down()
+        .pause(100)
+        .move({ duration: 600, x, y: Math.round(height * 0.4) })
+        // Hold still before lifting, so the list does not fling past the card.
+        .pause(400)
+        .up()
+        .perform();
+      await browser.pause(1_000);
+    }
   }
 }
