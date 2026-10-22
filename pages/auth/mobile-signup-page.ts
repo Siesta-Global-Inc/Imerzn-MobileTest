@@ -78,7 +78,15 @@ export class MobileSignupPage {
     await this.codeSentMessage.waitForDisplayed({ timeout: 60_000 });
     await this.verificationCodeButton.click();
 
-    await fillField(this.codeInput, code);
+    // Typing right after the screen opens can be lost on a slow emulator (CI showed empty code
+    // boxes); type again until the field holds the code.
+    for (let attempt = 1; attempt <= 3; attempt += 1) {
+      await fillField(this.codeInput, code);
+      await browser.pause(1_000);
+      if ((await this.codeInput.getText().catch(() => '')).includes(code)) {
+        break;
+      }
+    }
     await this.verifyButton.click();
   }
 }

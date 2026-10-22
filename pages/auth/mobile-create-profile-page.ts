@@ -3,7 +3,7 @@ import type {
   MobileTravelerProfileData,
 } from '@data/common/mobile-auth-data';
 import { addImageToGallery } from '@helpers/mobile-app';
-import { byLabel, byLabelStart, fillField, inputByHint, scrollTo, tapInside } from '@helpers/mobile-elements';
+import { byLabel, byLabelStart, dragFormEdge, fillField, inputByHint, scrollTo, tapInside } from '@helpers/mobile-elements';
 
 /** "Create Your Profile" screen shown after the signup code is verified (Traveler and Localite). */
 export class MobileCreateProfilePage {
@@ -145,7 +145,19 @@ export class MobileCreateProfilePage {
     }
     await expect(this.experiencesDropdown).toHaveAttribute('content-desc', data.experiences.join(', '));
 
-    await scrollTo(this.zipcodeInput);
+    // On CI the field was on screen but missing from the app's element tree after scrolling; a
+    // small drag makes the app expose it again.
+    for (let attempt = 1; ; attempt += 1) {
+      const found = await scrollTo(this.zipcodeInput).then(() => true, () => false);
+      if (found) {
+        break;
+      }
+      if (attempt === 3) {
+        throw new Error('The Zipcode field was not found on Create Your Profile.');
+      }
+      await dragFormEdge('up', 0.25);
+      await browser.pause(2_000);
+    }
     await fillField(this.zipcodeInput, data.zipcode);
   }
 
