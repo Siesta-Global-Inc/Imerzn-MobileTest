@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mobile Test Report</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0 auto; max-width: 1100px; padding: 16px; color: #1f2328; background: #fff; }
+  h1 { font-size: 22px; } h2 { font-size: 18px; margin-bottom: 4px; }
+  .meta { color: #59636e; font-size: 13px; margin-top: 0; }
+  section { border-top: 1px solid #d1d9e0; padding-top: 12px; margin-top: 20px; }
+  pre { background: #f6f8fa; padding: 12px; overflow-x: auto; white-space: pre-wrap; font-size: 13px; }
+  img { max-width: 360px; width: 100%; border: 1px solid #d1d9e0; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>Mobile test report</h1>
+<p>Spec Files: 13 passed, 8 retries, 6 failed, 19 total (100% completed) in 00:29:54 </p>
+<p class="meta"><a href="test-log.txt">Full test log</a> · Passwords are masked. Element trees and the Appium log are in the run's mobile-test-results artifact.</p>
+
+  <section>
+    <h2>1. mobile PRF-002 | Localite edits name, bio, and hosted experiences</h2>
+    <p class="meta">tests/localite/mobile-edit-profile.spec.ts</p>
+    <pre>Error: Step &quot;Save the profile&quot; failed: The profile was not saved: still on &quot;Edit Profile&quot; after Save (app message: &quot;Please select the county&quot;).
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:37:5)</pre>
+    <a href="img/1-1.png"><img src="img/1-1.png" alt="Screenshot of mobile PRF-002 | Localite edits name, bio, and hosted experiences"></a>
+  </section>
+
+  <section>
+    <h2>2. mobile PRF-002 | Localite edits name, bio, and hosted experiences</h2>
+    <p class="meta">tests/localite/mobile-edit-profile.spec.ts</p>
+    <pre>Error: Step &quot;Save the profile&quot; failed: The profile was not saved: still on &quot;Edit Profile&quot; after Save (app message: &quot;Please select the county&quot;).
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:37:5)</pre>
+    <a href="img/2-1.png"><img src="img/2-1.png" alt="Screenshot of mobile PRF-002 | Localite edits name, bio, and hosted experiences"></a>
+  </section>
+
+  <section>
+    <h2>3. mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending</h2>
+    <p class="meta">tests/flows/booking/mobile-01-experience-booking.spec.ts</p>
+    <pre>Error: Step &quot;Paid booking: open the experience and fill in the booking&quot; failed: element (&quot;//android.widget.EditText[@hint=&quot;Search location...&quot;]&quot;) still not displayed after 30000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async bookOnce (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:62:7)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:126:5)</pre>
+    <a href="img/3-1.png"><img src="img/3-1.png" alt="Screenshot of mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending"></a>
+  </section>
+
+  <section>
+    <h2>4. mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending</h2>
+    <p class="meta">tests/flows/booking/mobile-01-experience-booking.spec.ts</p>
+    <pre>Error: Step &quot;Paid booking: open the experience and fill in the booking&quot; failed: element (&quot;//android.widget.EditText[@hint=&quot;Search location...&quot;]&quot;) still not displayed after 30000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async bookOnce (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:62:7)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:126:5)</pre>
+    <a href="img/4-1.png"><img src="img/4-1.png" alt="Screenshot of mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending"></a>
+  </section>
+
+  <section>
+    <h2>5. mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings</h2>
+    <p class="meta">tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)</pre>
+    <a href="img/5-1.png"><img src="img/5-1.png" alt="Screenshot of mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"></a>
+  </section>
+
+  <section>
+    <h2>6. mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings</h2>
+    <p class="meta">tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)</pre>
+    <a href="img/6-1.png"><img src="img/6-1.png" alt="Screenshot of mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"></a>
+  </section>
+
+  <section>
+    <h2>7. mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings</h2>
+    <p class="meta">tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:22:37)</pre>
+    <a href="img/7-1.png"><img src="img/7-1.png" alt="Screenshot of mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"></a>
+  </section>
+
+  <section>
+    <h2>8. mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings</h2>
+    <p class="meta">tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:22:37)</pre>
+    <a href="img/8-1.png"><img src="img/8-1.png" alt="Screenshot of mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"></a>
+  </section>
+
+  <section>
+    <h2>9. mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:21:37)</pre>
+    <a href="img/9-1.png"><img src="img/9-1.png" alt="Screenshot of mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled"></a>
+  </section>
+
+  <section>
+    <h2>10. mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:21:37)</pre>
+    <a href="img/10-1.png"><img src="img/10-1.png" alt="Screenshot of mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled"></a>
+  </section>
+
+  <section>
+    <h2>11. mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:21:37)</pre>
+    <a href="img/11-1.png"><img src="img/11-1.png" alt="Screenshot of mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled"></a>
+  </section>
+
+  <section>
+    <h2>12. mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:21:37)</pre>
+    <a href="img/12-1.png"><img src="img/12-1.png" alt="Screenshot of mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled"></a>
+  </section>
+</body>
+</html>
