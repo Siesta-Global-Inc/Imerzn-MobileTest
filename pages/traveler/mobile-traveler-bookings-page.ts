@@ -71,8 +71,15 @@ export class MobileTravelerBookingsPage {
     return String(Math.max(...ids));
   }
 
-  /** Scroll to the booking's card and return its status line (third line, e.g. "On Going"). */
+  /**
+   * Scroll to the booking's card and return its status line (third line, e.g. "On Going").
+   * Opens the Bookings tab first if the app has left it (on CI, after Cancel Trip the app showed
+   * the Localites tab).
+   */
   async status(bookingId: string): Promise<string> {
+    if (!(await this.heading.isDisplayed().catch(() => false))) {
+      await this.open();
+    }
     await this.show(bookingId);
     const label = (await this.card(bookingId).getAttribute('content-desc')) ?? '';
     return label.split('\n')[2]?.trim() ?? '';

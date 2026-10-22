@@ -115,11 +115,11 @@ export class MobileLocaliteBookingsPage {
   /** Scroll the list until the booking's buttons are on screen. */
   async show(bookingId: string): Promise<void> {
     const travelerLine = this.travelerAndStatus(bookingId);
-    if (await travelerLine.isDisplayed().catch(() => false)) {
-      return;
+    if (!(await travelerLine.isDisplayed().catch(() => false))) {
+      await scrollTo(this.card(bookingId), 'down', 12).catch(async () => scrollTo(this.card(bookingId), 'up', 12));
     }
-    await scrollTo(this.card(bookingId), 'down', 12).catch(async () => scrollTo(this.card(bookingId), 'up', 12));
-    // A card found while scrolling can be cut off at the screen edge; bring all of it on screen.
-    await centerOnScreen(this.card(bookingId));
+    // A card found while scrolling can be cut off at the screen edge (on CI Chat was below it):
+    // move its top line into the upper half, which brings the buttons under it on screen.
+    await centerOnScreen((await travelerLine.isDisplayed().catch(() => false)) ? travelerLine : this.card(bookingId));
   }
 }
