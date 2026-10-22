@@ -40,6 +40,69 @@ export class MobileLocaliteBookingsPage {
     await openTab(this.bookingsTab, this.heading);
   }
 
+  /** Filter menu ("Show menu") in the search box: All, Pending, On Going, Completed, Cancelled, Expired. */
+  get filterMenuButton() {
+    return browser.$('//android.widget.Button[@content-desc="Show menu"]');
+  }
+
+  statusFilterOption(status: string) {
+    return browser.$(`//android.widget.RadioButton[@content-desc=${xpathString(status)}]`);
+  }
+
+  /** "Search by country, state, city or zipcode" box; it also finds a booking by its id. */
+  get searchInput() {
+    return browser.$('(//android.widget.EditText)[1]');
+  }
+
+  /**
+   * Show the booking's whole card: filter the list by the status, and if the card is still not
+   * fully on screen (on CI booking 4077 was cut off under the search bar), search its Booking ID,
+   * which lists only that booking.
+   */
+  async findBooking(bookingId: string, status: 'On Going' | 'Pending'): Promise<void> {
+    await this.filterMenuButton.waitForDisplayed({ timeout: 30_000 });
+    await this.filterMenuButton.click();
+    await this.statusFilterOption(status).waitForDisplayed({ timeout: 30_000 });
+    // Tap the status until it is selected (a tap while the menu is opening can be ignored). The
+    // menu can stay open after the choice (seen locally), so close it with Back if needed.
+    const option = this.statusFilterOption(status);
+    for (let tap = 1; tap <= 3; tap += 1) {
+      await browser.pause(1_500);
+      if (!(await option.isDisplayed().catch(() => false))) {
+        break;
+      }
+      await option.click().catch(() => {});
+      await browser.pause(1_500);
+      if ((await option.getAttribute('checked').catch(() => 'false')) === 'true') {
+        break;
+      }
+    }
+    if (await option.isDisplayed().catch(() => false)) {
+      await browser.back();
+    }
+    await option.waitForDisplayed({ reverse: true, timeout: 10_000 });
+    await browser.pause(2_000);
+    if (await this.isFullyShown(bookingId)) {
+      return;
+    }
+    console.info(`[INFO] Booking ${bookingId} is not fully shown after filtering by ${status}; searching its id.`);
+    await this.searchInput.click();
+    await this.searchInput.setValue(bookingId);
+    await browser.pressKeyCode(66); // Enter
+    await this.travelerAndStatus(bookingId).waitForDisplayed({ timeout: 30_000 });
+  }
+
+  /** True when the card's top line and its bottom (the buttons) are on screen. */
+  private async isFullyShown(bookingId: string): Promise<boolean> {
+    if (!(await this.travelerAndStatus(bookingId).isDisplayed().catch(() => false))) {
+      return false;
+    }
+    const { height } = await browser.getWindowSize();
+    const { y, height: cardHeight } = await this.card(bookingId).getElementRect(await this.card(bookingId).elementId);
+    // The bottom tab bar covers the last ~9% of the screen.
+    return y + cardHeight < height * 0.9;
+  }
+
   /** Scroll to the booking and return "<traveler name>" and "<status>". */
   async travelerAndStatusOf(bookingId: string): Promise<{ traveler: string; status: string }> {
     await this.show(bookingId);

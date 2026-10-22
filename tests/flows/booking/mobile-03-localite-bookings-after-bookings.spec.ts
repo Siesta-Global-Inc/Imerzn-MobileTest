@@ -38,6 +38,7 @@ describe('mobile-flow-localite-bookings', () => {
     await step('Verify all bookings in Bookings', async () => {
       await bookingsPage.open();
       for (const booking of paid) {
+        await bookingsPage.findBooking(booking.bookingId, 'On Going');
         await bookingsPage.expectStatus(booking.bookingId, /^On Going$/);
         expect((await bookingsPage.travelerAndStatusOf(booking.bookingId)).traveler).toBe(travelerName);
         await bookingsPage.verifyCardDetails(booking.bookingId, {
@@ -47,6 +48,7 @@ describe('mobile-flow-localite-bookings', () => {
         await expect(bookingsPage.button(booking.bookingId, 'Cancel Booking')).toBeDisplayed();
       }
       for (const booking of pending) {
+        await bookingsPage.findBooking(booking.bookingId, 'Pending');
         await bookingsPage.expectStatus(booking.bookingId, /pending/i);
         await expect(bookingsPage.button(booking.bookingId, 'Cancel Booking')).toBeDisplayed();
       }

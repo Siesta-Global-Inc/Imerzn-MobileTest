@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       spec:
-        description: 'Run one test file only (e.g. tests/auth/mobile-login.spec.ts). Leave empty to run all.'
+        description: 'Run only these test files, comma-separated and in run order (e.g. tests/auth/mobile-login.spec.ts,tests/traveler/mobile-wishlist.spec.ts). Include the tests that create the accounts and data they use. Leave empty to run all.'
         required: false
         default: ''
 
@@ -102,7 +102,7 @@ jobs:
             adb shell pm disable-user --user 0 com.google.android.apps.nexuslauncher || true
             adb shell settings put global hide_error_dialogs 1 || true
             mkdir -p mobile-test-results
-            bash -o pipefail -c 'if [ -n "$SPEC" ]; then npx wdio run mobile-wdio.conf.ts --spec "$SPEC"; else npm run mobile:test; fi 2>&1 | tee mobile-test-results/wdio-output.log'
+            bash -o pipefail -c 'if [ -n "$SPEC" ]; then ARGS=""; for f in $(echo "$SPEC" | tr "," " "); do ARGS="$ARGS --spec $f"; done; npx wdio run mobile-wdio.conf.ts $ARGS; else npm run mobile:test; fi 2>&1 | tee mobile-test-results/wdio-output.log'
 
       - name: Upload test results
         if: always()
