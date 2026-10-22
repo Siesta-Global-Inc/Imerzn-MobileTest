@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mobile Test Report</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0 auto; max-width: 1100px; padding: 16px; color: #1f2328; background: #fff; }
+  h1 { font-size: 22px; } h2 { font-size: 18px; margin-bottom: 4px; }
+  .meta { color: #59636e; font-size: 13px; margin-top: 0; }
+  section { border-top: 1px solid #d1d9e0; padding-top: 12px; margin-top: 20px; }
+  pre { background: #f6f8fa; padding: 12px; overflow-x: auto; white-space: pre-wrap; font-size: 13px; }
+  img { max-width: 360px; width: 100%; border: 1px solid #d1d9e0; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>Mobile test report</h1>
+<p>Spec Files: 16 passed, 7 retries, 3 failed, 19 total (100% completed) in 00:41:51 </p>
+<p class="meta"><a href="test-log.txt">Full test log</a> · Passwords are masked. Element trees and the Appium log are in the run's mobile-test-results artifact.</p>
+
+  <section>
+    <h2>1. mobile PRF-002 | Localite edits name, bio, and hosted experiences</h2>
+    <p class="meta">tests/localite/mobile-edit-profile.spec.ts</p>
+    <pre>Error: Step &quot;Edit name, bio, and experiences&quot; failed: The Bio field is not shown on Edit Profile. If the screenshot shows a red box under &quot;Pronouns(optional)&quot;, the app&#39;s Pronouns dropdown crashed (dropdown_button2: &quot;There should be exactly one item with [DropdownButton]&#39;s value&quot;) and hides the rest of the form. element (&quot;//android.widget.EditText[@text=&quot;Born and raised local guide who loves sharing hidden gems, food spots, and history with travelers.&quot;]&quot;) still not displayed after 5000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:31:5)</pre>
+    <a href="img/1-1.png"><img src="img/1-1.png" alt="Screenshot of mobile PRF-002 | Localite edits name, bio, and hosted experiences"></a>
+  </section>
+
+  <section>
+    <h2>2. mobile PRF-002 | Localite edits name, bio, and hosted experiences</h2>
+    <p class="meta">tests/localite/mobile-edit-profile.spec.ts</p>
+    <pre>Error: Step &quot;Edit name, bio, and experiences&quot; failed: The Bio field is not shown on Edit Profile. If the screenshot shows a red box under &quot;Pronouns(optional)&quot;, the app&#39;s Pronouns dropdown crashed (dropdown_button2: &quot;There should be exactly one item with [DropdownButton]&#39;s value&quot;) and hides the rest of the form. element (&quot;//android.widget.EditText[@text=&quot;Born and raised local guide who loves sharing hidden gems, food spots, and history with travelers.&quot;]&quot;) still not displayed after 5000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:31:5)</pre>
+    <a href="img/2-1.png"><img src="img/2-1.png" alt="Screenshot of mobile PRF-002 | Localite edits name, bio, and hosted experiences"></a>
+  </section>
+
+  <section>
+    <h2>3. mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings</h2>
+    <p class="meta">tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts</p>
+    <pre>Error: Step &quot;Verify the charged amounts match the Payment dialog&quot; failed: Booking 4075: charged $183.60, but the Payment dialog showed Total Amount Due $183.87.
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:72:5)</pre>
+    <a href="img/3-1.png"><img src="img/3-1.png" alt="Screenshot of mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"></a>
+  </section>
+
+  <section>
+    <h2>4. mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings</h2>
+    <p class="meta">tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts</p>
+    <pre>Error: Step &quot;Verify all bookings in Bookings&quot; failed: Expect $(`//*[contains(@content-desc, &quot;
+Booking ID: 4075
+&quot;)]`).$(`.//*[@content-desc=&quot;Cancel Trip&quot;]`) to be displayed
+
+Expected: &quot;displayed&quot;
+Received: &quot;not displayed&quot;
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:35:5)</pre>
+    <a href="img/4-1.png"><img src="img/4-1.png" alt="Screenshot of mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"></a>
+  </section>
+
+  <section>
+    <h2>5. mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings</h2>
+    <p class="meta">tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts</p>
+    <pre>Error: Step &quot;Verify all bookings in Bookings&quot; failed: Booking 4077: status is &quot;&quot;, expected /^On Going$/.
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:38:5)</pre>
+    <a href="img/5-1.png"><img src="img/5-1.png" alt="Screenshot of mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"></a>
+  </section>
+
+  <section>
+    <h2>6. mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings</h2>
+    <p class="meta">tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts</p>
+    <pre>Error: Step &quot;Verify all bookings in Bookings&quot; failed: Booking 4077: status is &quot;&quot;, expected /^On Going$/.
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:38:5)</pre>
+    <a href="img/6-1.png"><img src="img/6-1.png" alt="Screenshot of mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"></a>
+  </section>
+</body>
+</html>
