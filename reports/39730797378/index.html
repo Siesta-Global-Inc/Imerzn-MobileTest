@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mobile Test Report</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0 auto; max-width: 1100px; padding: 16px; color: #1f2328; background: #fff; }
+  h1 { font-size: 22px; } h2 { font-size: 18px; margin-bottom: 4px; }
+  .meta { color: #59636e; font-size: 13px; margin-top: 0; }
+  section { border-top: 1px solid #d1d9e0; padding-top: 12px; margin-top: 20px; }
+  pre { background: #f6f8fa; padding: 12px; overflow-x: auto; white-space: pre-wrap; font-size: 13px; }
+  img { max-width: 360px; width: 100%; border: 1px solid #d1d9e0; margin-top: 8px; }
+</style>
+</head>
+<body>
+<h1>Mobile test report</h1>
+<p>Spec Files: 6 passed, 14 retries, 13 failed, 19 total (100% completed) in 00:16:41 </p>
+<p class="meta"><a href="test-log.txt">Full test log</a> · Passwords are masked. Element trees and the Appium log are in the run's mobile-test-results artifact.</p>
+
+  <section>
+    <h2>1. mobile LOC-001 | New localite signs up and is verified by an admin</h2>
+    <p class="meta">tests/auth/mobile-localite-signup-and-verify.spec.ts</p>
+    <pre>Error: Step &quot;Create the localite profile&quot; failed: The profile was not saved: still on &quot;Create Your Profile&quot; after Submit.
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts:58:5)</pre>
+    <a href="img/1-1.png"><img src="img/1-1.png" alt="Screenshot of mobile LOC-001 | New localite signs up and is verified by an admin"></a>
+  </section>
+
+  <section>
+    <h2>2. mobile LOC-001 | New localite signs up and is verified by an admin</h2>
+    <p class="meta">tests/auth/mobile-localite-signup-and-verify.spec.ts</p>
+    <pre>Error: Step &quot;Create the localite profile&quot; failed: The Zipcode field was not found on Create Your Profile.
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts:58:5)</pre>
+    <a href="img/2-1.png"><img src="img/2-1.png" alt="Screenshot of mobile LOC-001 | New localite signs up and is verified by an admin"></a>
+  </section>
+
+  <section>
+    <h2>3. mobile EXP-002 | Localite creates and publishes an experience</h2>
+    <p class="meta">tests/localite/mobile-create-experience.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts:15:28)</pre>
+    <a href="img/3-1.png"><img src="img/3-1.png" alt="Screenshot of mobile EXP-002 | Localite creates and publishes an experience"></a>
+  </section>
+
+  <section>
+    <h2>4. mobile EXP-002 | Localite creates and publishes an experience</h2>
+    <p class="meta">tests/localite/mobile-create-experience.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts:15:28)</pre>
+    <a href="img/4-1.png"><img src="img/4-1.png" alt="Screenshot of mobile EXP-002 | Localite creates and publishes an experience"></a>
+  </section>
+
+  <section>
+    <h2>5. mobile GAL-001 | Localite creates a gallery and it appears on the profile</h2>
+    <p class="meta">tests/localite/mobile-create-gallery.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts:12:28)</pre>
+    <a href="img/5-1.png"><img src="img/5-1.png" alt="Screenshot of mobile GAL-001 | Localite creates a gallery and it appears on the profile"></a>
+  </section>
+
+  <section>
+    <h2>6. mobile GAL-001 | Localite creates a gallery and it appears on the profile</h2>
+    <p class="meta">tests/localite/mobile-create-gallery.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts:12:28)</pre>
+    <a href="img/6-1.png"><img src="img/6-1.png" alt="Screenshot of mobile GAL-001 | Localite creates a gallery and it appears on the profile"></a>
+  </section>
+
+  <section>
+    <h2>7. mobile PRF-002 | Localite edits name, bio, and hosted experiences</h2>
+    <p class="meta">tests/localite/mobile-edit-profile.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:12:28)</pre>
+    <a href="img/7-1.png"><img src="img/7-1.png" alt="Screenshot of mobile PRF-002 | Localite edits name, bio, and hosted experiences"></a>
+  </section>
+
+  <section>
+    <h2>8. mobile PRF-002 | Localite edits name, bio, and hosted experiences</h2>
+    <p class="meta">tests/localite/mobile-edit-profile.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:12:28)</pre>
+    <a href="img/8-1.png"><img src="img/8-1.png" alt="Screenshot of mobile PRF-002 | Localite edits name, bio, and hosted experiences"></a>
+  </section>
+
+  <section>
+    <h2>9. mobile PRF-001 | Localite previews the profile and goes back</h2>
+    <p class="meta">tests/localite/mobile-preview-profile.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts:12:28)</pre>
+    <a href="img/9-1.png"><img src="img/9-1.png" alt="Screenshot of mobile PRF-001 | Localite previews the profile and goes back"></a>
+  </section>
+
+  <section>
+    <h2>10. mobile PRF-001 | Localite previews the profile and goes back</h2>
+    <p class="meta">tests/localite/mobile-preview-profile.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts:12:28)</pre>
+    <a href="img/10-1.png"><img src="img/10-1.png" alt="Screenshot of mobile PRF-001 | Localite previews the profile and goes back"></a>
+  </section>
+
+  <section>
+    <h2>11. mobile PRF-003 | Localite opens and closes the share sheet from the profile</h2>
+    <p class="meta">tests/localite/mobile-share-profile.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts:10:28)</pre>
+    <a href="img/11-1.png"><img src="img/11-1.png" alt="Screenshot of mobile PRF-003 | Localite opens and closes the share sheet from the profile"></a>
+  </section>
+
+  <section>
+    <h2>12. mobile PRF-003 | Localite opens and closes the share sheet from the profile</h2>
+    <p class="meta">tests/localite/mobile-share-profile.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts:10:28)</pre>
+    <a href="img/12-1.png"><img src="img/12-1.png" alt="Screenshot of mobile PRF-003 | Localite opens and closes the share sheet from the profile"></a>
+  </section>
+
+  <section>
+    <h2>13. mobile MENU-001 | Localite opens each item of the left menu</h2>
+    <p class="meta">tests/localite/mobile-left-menu.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts:14:28)</pre>
+    <a href="img/13-1.png"><img src="img/13-1.png" alt="Screenshot of mobile MENU-001 | Localite opens each item of the left menu"></a>
+  </section>
+
+  <section>
+    <h2>14. mobile MENU-001 | Localite opens each item of the left menu</h2>
+    <p class="meta">tests/localite/mobile-left-menu.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts:14:28)</pre>
+    <a href="img/14-1.png"><img src="img/14-1.png" alt="Screenshot of mobile MENU-001 | Localite opens each item of the left menu"></a>
+  </section>
+
+  <section>
+    <h2>15. mobile SET-002 | Localite changes the password and logs in with it</h2>
+    <p class="meta">tests/localite/mobile-localite-settings.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts:13:28)</pre>
+    <a href="img/15-1.png"><img src="img/15-1.png" alt="Screenshot of mobile SET-002 | Localite changes the password and logs in with it"></a>
+  </section>
+
+  <section>
+    <h2>16. mobile SET-002 | Localite changes the password and logs in with it</h2>
+    <p class="meta">tests/localite/mobile-localite-settings.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts:13:28)</pre>
+    <a href="img/16-1.png"><img src="img/16-1.png" alt="Screenshot of mobile SET-002 | Localite changes the password and logs in with it"></a>
+  </section>
+
+  <section>
+    <h2>17. mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending</h2>
+    <p class="meta">tests/flows/booking/mobile-01-experience-booking.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:29:28)</pre>
+    <a href="img/17-1.png"><img src="img/17-1.png" alt="Screenshot of mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending"></a>
+  </section>
+
+  <section>
+    <h2>18. mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending</h2>
+    <p class="meta">tests/flows/booking/mobile-01-experience-booking.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts:29:28)</pre>
+    <a href="img/18-1.png"><img src="img/18-1.png" alt="Screenshot of mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending"></a>
+  </section>
+
+  <section>
+    <h2>19. mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings</h2>
+    <p class="meta">tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)</pre>
+    <a href="img/19-1.png"><img src="img/19-1.png" alt="Screenshot of mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"></a>
+  </section>
+
+  <section>
+    <h2>20. mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings</h2>
+    <p class="meta">tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No bookings found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/traveler/mobile-created-bookings.json). Run the mobile booking test first: tests/flows/booking/mobile-01-experience-booking.spec.ts
+    at readMobileCreatedBookings (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-bookings.ts:37:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts:20:37)</pre>
+    <a href="img/20-1.png"><img src="img/20-1.png" alt="Screenshot of mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings"></a>
+  </section>
+
+  <section>
+    <h2>21. mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings</h2>
+    <p class="meta">tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:20:28)</pre>
+    <a href="img/21-1.png"><img src="img/21-1.png" alt="Screenshot of mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"></a>
+  </section>
+
+  <section>
+    <h2>22. mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings</h2>
+    <p class="meta">tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts:20:28)</pre>
+    <a href="img/22-1.png"><img src="img/22-1.png" alt="Screenshot of mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings"></a>
+  </section>
+
+  <section>
+    <h2>23. mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:20:28)</pre>
+    <a href="img/23-1.png"><img src="img/23-1.png" alt="Screenshot of mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled"></a>
+  </section>
+
+  <section>
+    <h2>24. mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts:20:28)</pre>
+    <a href="img/24-1.png"><img src="img/24-1.png" alt="Screenshot of mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled"></a>
+  </section>
+
+  <section>
+    <h2>25. mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:19:28)</pre>
+    <a href="img/25-1.png"><img src="img/25-1.png" alt="Screenshot of mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled"></a>
+  </section>
+
+  <section>
+    <h2>26. mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled</h2>
+    <p class="meta">tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts</p>
+    <pre>Error: No created localite found (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/testdata/localite/mobile-created-localite.json). Run the mobile localite signup test first: npm run mobile:localite-signup
+    at readMobileCreatedLocalite (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/data/state/mobile-created-localite.ts:29:11)
+    at Context.&lt;anonymous&gt; (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:19:28)</pre>
+    <a href="img/26-1.png"><img src="img/26-1.png" alt="Screenshot of mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled"></a>
+  </section>
+</body>
+</html>
