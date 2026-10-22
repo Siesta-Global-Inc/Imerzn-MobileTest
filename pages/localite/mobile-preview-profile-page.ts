@@ -2,8 +2,9 @@ import { byLabel, byLabelContaining, scrollFormTo } from '@helpers/mobile-elemen
 
 /** "Preview Profile" screen: the localite's profile as travelers see it. */
 export class MobilePreviewProfilePage {
+  /** Screen title: a plain view (the Profile's "Preview Profile" button is an image). */
   get heading() {
-    return byLabel('Preview Profile');
+    return browser.$('//android.view.View[@content-desc="Preview Profile"]');
   }
 
   /** Back arrow in the top bar. */

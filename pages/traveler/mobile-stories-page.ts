@@ -1,4 +1,4 @@
-import { byLabelContaining, byLabelStart, scrollTo } from '@helpers/mobile-elements';
+import { byLabelStart, scrollTo, xpathString } from '@helpers/mobile-elements';
 
 /** Traveler "Stories" tab, with its "Stories" (public) and "My Stories" tabs. */
 export class MobileStoriesPage {
@@ -17,9 +17,13 @@ export class MobileStoriesPage {
     return byLabelStart('My Stories\nTab');
   }
 
-  /** Story card; its label lists the author, date, title, location, and description. */
+  /**
+   * Story card on the open tab; its label lists the author, date, title, location, and
+   * description. The other tab stays loaded off screen and can list the same story, so only the
+   * card that is displayed counts.
+   */
   storyCard(title: string) {
-    return byLabelContaining(title);
+    return browser.$(`(//*[contains(@content-desc, ${xpathString(title)}) and @displayed="true"])[1]`);
   }
 
   async waitForLoaded(): Promise<void> {

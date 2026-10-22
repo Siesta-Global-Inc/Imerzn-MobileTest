@@ -114,11 +114,15 @@ export class MobilePaymentDialog {
 
   /** Fill the billing address: Name, Address, then Country, State, City from their lists, and Postal Code. */
   async fillBilling(details: MobilePaymentDetails): Promise<void> {
+    // On a shorter screen the lower fields are below the dialog's edge (CI's screen ends at City).
+    await this.swipeDialogTo(this.nameInput);
     await fillField(this.nameInput, details.billingName);
+    await this.swipeDialogTo(this.addressInput);
     await fillField(this.addressInput, details.billingAddress);
     await this.pickFromList('Country', details.billingCountry);
     await this.pickFromList('State', details.billingState);
     await this.pickFromList('City', details.billingCity);
+    await this.swipeDialogTo(this.postalCodeInput);
     await fillField(this.postalCodeInput, details.billingZip);
   }
 
@@ -156,6 +160,7 @@ export class MobilePaymentDialog {
 
   /** Open a Country/State/City list, search the value, and pick it. */
   private async pickFromList(name: 'Country' | 'State' | 'City', value: string): Promise<void> {
+    await this.swipeDialogTo(this.pickerField(name));
     await this.pickerField(name).click();
     await this.pickerSearchPlaceholder.waitForDisplayed({ timeout: 30_000 });
     await fillField(this.pickerSearchInput, value);

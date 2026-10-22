@@ -39,9 +39,12 @@ export class MobileBookingSheet {
     return byLabel('Select time');
   }
 
-  /** Start time options of the open dropdown (buttons labelled e.g. "9:00 AM"). */
+  /**
+   * Start time options of the open dropdown that can be chosen (buttons labelled e.g. "9:00 AM").
+   * Times that have passed are still listed, greyed out and not clickable.
+   */
   get startTimeOptions() {
-    return browser.$$('//android.widget.Button[contains(@content-desc, " AM") or contains(@content-desc, " PM")]');
+    return browser.$$('//android.widget.Button[(contains(@content-desc, " AM") or contains(@content-desc, " PM")) and @clickable="true"]');
   }
 
   get groupSizeInput() {

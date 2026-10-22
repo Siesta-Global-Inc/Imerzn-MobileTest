@@ -46,7 +46,14 @@ export class MobileEditProfilePage {
     await fillField(this.firstNameInput, data.firstName);
     await fillField(this.lastNameInput, data.lastName);
 
-    await scrollFormTo(this.bioInput(currentBio));
+    await scrollFormTo(this.bioInput(currentBio)).catch((error: Error) => {
+      // App bug seen on dev (Oct 2026): the "Pronouns(optional)" dropdown fails a Flutter assertion
+      // ("There should be exactly one item with [DropdownButton]'s value") and its red error box
+      // covers the rest of the form, so Bio and every field below it are never shown.
+      throw new Error('The Bio field is not shown on Edit Profile. If the screenshot shows a red box under ' +
+        '"Pronouns(optional)", the app\'s Pronouns dropdown crashed (dropdown_button2: "There should be exactly ' +
+        `one item with [DropdownButton]'s value") and hides the rest of the form. ${error.message}`);
+    });
     await fillField(this.bioInput(currentBio), data.bio);
 
     // Tapping an option adds or removes it; tap the ones that need to change, one per opening
