@@ -61,7 +61,7 @@ describe('mobile-flow-booking', () => {
 
       await step(`${label}: open the experience and fill in the booking`, async () => {
         await homePage.experiencesTab.click();
-        await bookingSheet.openExperience(experienceTitle);
+        await bookingSheet.searchAndOpenExperience(experienceTitle);
         await bookingSheet.open();
         await bookingSheet.selectDate(request.date);
         startTime = await bookingSheet.selectFirstStartTime();
@@ -103,7 +103,7 @@ describe('mobile-flow-booking', () => {
         }
         await homePage.experiencesTab.waitForDisplayed({ timeout: 30_000 });
         await bookingsPage.open();
-        const bookingId = await bookingsPage.newestBookingId(date);
+        const bookingId = await bookingsPage.newestBookingId(date, pay ? 'On Going' : 'Pending');
         const status = await bookingsPage.status(bookingId);
         console.info(`[DATA] ${label}: Booking ID ${bookingId}, status "${status}"`);
         if (pay) {

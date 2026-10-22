@@ -1,4 +1,7 @@
 import type { MobileCreatedBooking } from '@data/state/mobile-created-bookings';
+
+/** Statuses in the Bookings filter menu. */
+export type MobileBookingStatusFilter = 'All' | 'Pending' | 'On Going' | 'Completed' | 'Cancelled' | 'Expired';
 import { byLabel, byLabelStart, fillField, inputByHint, centerOnScreen, openTab, scrollTo, xpathString } from '@helpers/mobile-elements';
 
 /**
@@ -42,32 +45,48 @@ export class MobileTravelerBookingsPage {
     await openTab(this.bookingsTab, this.heading);
   }
 
+  /** Filter menu ("Show menu") right of the search box: All, Pending, On Going, ... */
+  get filterMenuButton() {
+    return byLabel('Show menu');
+  }
+
+  /** Option of the open filter menu. */
+  statusFilterOption(status: MobileBookingStatusFilter) {
+    return browser.$(`//android.widget.RadioButton[@content-desc=${xpathString(status)}]`);
+  }
+
+  /** Show only the bookings with the status: open the filter menu and choose it. */
+  async filterByStatus(status: MobileBookingStatusFilter): Promise<void> {
+    await this.filterMenuButton.waitForDisplayed({ timeout: 30_000 });
+    await this.filterMenuButton.click();
+    await this.statusFilterOption(status).waitForDisplayed({ timeout: 30_000 });
+    await this.statusFilterOption(status).click();
+    await this.statusFilterOption(status).waitForDisplayed({ reverse: true, timeout: 30_000 });
+  }
+
   /**
-   * The newest booking on the date: scroll down the list, collect the ids of the cards with that
-   * date, and return the highest (ids grow with each booking).
+   * The newest booking with the status on the date: filter the list by the status, then return the
+   * highest id among the cards with that date (ids grow with each booking). Right after a payment
+   * the status can still be changing, so the filter is applied again until the booking shows.
    */
-  async newestBookingId(date: string): Promise<string> {
+  async newestBookingId(date: string, status: MobileBookingStatusFilter): Promise<string> {
     const ids = new Set<number>();
-    for (let swipe = 0; swipe < 12; swipe += 1) {
-      const before = ids.size;
-      for (const card of await browser.$$('//*[contains(@content-desc, "Booking ID: ")]')) {
-        const label = (await card.getAttribute('content-desc')) ?? '';
-        const id = /Booking ID: (\d+)/.exec(label)?.[1];
-        if (id && label.includes(date)) {
-          ids.add(Number(id));
+    for (let attempt = 1; attempt <= 3 && ids.size === 0; attempt += 1) {
+      await this.filterByStatus(status);
+      await browser.waitUntil(async () => {
+        for (const card of await browser.$$('//*[contains(@content-desc, "Booking ID: ")]')) {
+          const label = (await card.getAttribute('content-desc')) ?? '';
+          const id = /Booking ID: (\d+)/.exec(label)?.[1];
+          if (id && label.includes(date)) {
+            ids.add(Number(id));
+          }
         }
-      }
-      if (swipe > 0 && ids.size === before && ids.size > 0) {
-        break;
-      }
-      await browser.execute('mobile: scrollGesture', {
-        left: 100, top: 600, width: 1100, height: 1800, direction: 'down', percent: 0.7,
-      }).catch(() => {});
+        return ids.size > 0;
+      }, { timeout: 20_000, interval: 2_000 }).catch(() => {});
     }
     if (ids.size === 0) {
-      throw new Error(`No booking dated ${date} was found in Bookings.`);
+      throw new Error(`No ${status} booking dated ${date} was found in Bookings (filtered by ${status}).`);
     }
-    await this.scrollToTop();
     return String(Math.max(...ids));
   }
 
@@ -134,17 +153,6 @@ export class MobileTravelerBookingsPage {
     await scrollTo(this.card(bookingId), 'down', 12).catch(async () => scrollTo(this.card(bookingId), 'up', 12));
     // A card found while scrolling can be cut off at the screen edge; bring all of it on screen.
     await centerOnScreen(this.card(bookingId));
-  }
-
-  private async scrollToTop(): Promise<void> {
-    for (let swipe = 0; swipe < 12; swipe += 1) {
-      const canScroll = await browser.execute('mobile: scrollGesture', {
-        left: 100, top: 600, width: 1100, height: 1800, direction: 'up', percent: 1,
-      }).catch(() => false);
-      if (!canScroll) {
-        return;
-      }
-    }
   }
 }
 

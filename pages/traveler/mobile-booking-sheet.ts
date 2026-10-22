@@ -71,9 +71,45 @@ export class MobileBookingSheet {
     await this.bookExperienceButton.waitForDisplayed({ timeout: 60_000 });
   }
 
-  /** Tap Book Experience and wait for the sheet. */
+  /** Search box at the top of the Experiences tab (its placeholder says location, but it also finds titles). */
+  get experienceSearchInput() {
+    return browser.$('//android.widget.EditText[@hint="Search location..."]');
+  }
+
+  /**
+   * Open the experience by searching its title on the Experiences tab: type the title, tap the
+   * search button (right of the box), then open the only card listed.
+   */
+  async searchAndOpenExperience(title: string): Promise<void> {
+    const box = this.experienceSearchInput;
+    await box.waitForDisplayed({ timeout: 30_000 });
+    // The placeholder is gone once text is typed, so measure the box first.
+    const { x, y, width, height } = await box.getElementRect(await box.elementId);
+    await fillField(box, title);
+    // The search button has no label; it sits just right of the box.
+    await browser.execute('mobile: clickGesture', { x: Math.round(x + width + height * 0.56), y: Math.round(y + height / 2) });
+    const card = this.experienceCard(title);
+    await card.waitForDisplayed({ timeout: 60_000 });
+    await card.click();
+    await this.bookExperienceButton.waitForDisplayed({ timeout: 60_000 });
+  }
+
+  /**
+   * Tap Book Experience and wait for the sheet. On CI the details page was still moving when the
+   * button was tapped and the tap opened the Localite Profile instead; then go back and tap again.
+   */
   async open(): Promise<void> {
-    await this.bookExperienceButton.click();
+    for (let tap = 1; tap <= 3; tap += 1) {
+      await this.bookExperienceButton.waitForDisplayed({ timeout: 30_000 });
+      await this.bookExperienceButton.click();
+      if (await this.dateLabel.waitForDisplayed({ timeout: 30_000 }).then(() => true, () => false)) {
+        return;
+      }
+      if (!(await this.bookExperienceButton.isDisplayed().catch(() => false))) {
+        await browser.back();
+        await browser.pause(2_000);
+      }
+    }
     await this.dateLabel.waitForDisplayed({ timeout: 30_000 });
   }
 
