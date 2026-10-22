@@ -71,9 +71,12 @@ export class MobileBookingSheet {
     await this.bookExperienceButton.waitForDisplayed({ timeout: 60_000 });
   }
 
-  /** Search box at the top of the Experiences tab (its placeholder says location, but it also finds titles). */
+  /**
+   * Search box at the top of the Experiences tab. Its placeholder differs between builds
+   * ("Search location..." or "Search by experience name, city, country or place"); both find titles.
+   */
   get experienceSearchInput() {
-    return browser.$('//android.widget.EditText[@hint="Search location..."]');
+    return browser.$('//android.widget.EditText[starts-with(@hint, "Search")]');
   }
 
   /**
@@ -84,10 +87,21 @@ export class MobileBookingSheet {
     const box = this.experienceSearchInput;
     await box.waitForDisplayed({ timeout: 30_000 });
     // The placeholder is gone once text is typed, so measure the box first.
-    const { x, y, width, height } = await box.getElementRect(await box.elementId);
+    const rect = await box.getElementRect(await box.elementId);
     await fillField(box, title);
-    // The search button has no label; it sits just right of the box.
-    await browser.execute('mobile: clickGesture', { x: Math.round(x + width + height * 0.56), y: Math.round(y + height / 2) });
+    // The search button has no label: it is the first tappable element right of the box, on the
+    // same row (a filter icon can follow it, or sit in the title bar instead).
+    const middleY = rect.y + rect.height / 2;
+    const button = [...(await browser.getPageSource()).matchAll(/clickable="true"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/g)]
+      .map(([, x1, y1, x2, y2]) => ({ left: Number(x1), top: Number(y1), right: Number(x2), bottom: Number(y2) }))
+      .filter((b) => b.left >= rect.x + rect.width - 5 && b.top <= middleY && b.bottom >= middleY)
+      .sort((a, b) => a.left - b.left)[0];
+    if (!button) {
+      throw new Error('The search button right of the Experiences search box was not found.');
+    }
+    await browser.execute('mobile: clickGesture', {
+      x: Math.round((button.left + button.right) / 2), y: Math.round((button.top + button.bottom) / 2),
+    });
     const card = this.experienceCard(title);
     await card.waitForDisplayed({ timeout: 60_000 });
     await card.click();
