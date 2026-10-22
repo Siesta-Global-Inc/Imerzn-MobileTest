@@ -39,6 +39,8 @@ export interface MobileEditProfileData {
   lastName: string;
   bio: string;
   experiences: string[];
+  /** Picked from the Location suggestions, e.g. "Addison, New York, United States". */
+  location: string;
 }
 
 /**
@@ -98,6 +100,7 @@ export async function readMobileEditProfileData(): Promise<MobileEditProfileData
     lastName: `${get('Last Name Prefix')}${letters}`,
     bio: get('Bio'),
     experiences: splitList(get('Experiences I Host')),
+    location: get('Location'),
   };
 }
 

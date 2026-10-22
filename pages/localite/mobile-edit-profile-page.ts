@@ -1,5 +1,5 @@
 import type { MobileEditProfileData } from '@data/localite/mobile-localite-data';
-import { byLabel, fillField, screenLabels, scrollFormTo, xpathString } from '@helpers/mobile-elements';
+import { byLabel, fillField, inputByHint, screenLabels, scrollFormTo, selectLocation, xpathString } from '@helpers/mobile-elements';
 
 /** "Edit Profile" screen, opened from the localite Profile. */
 export class MobileEditProfilePage {
@@ -80,6 +80,21 @@ export class MobileEditProfilePage {
       await browser.back();
       await this.experienceOption(toChange[0]).waitForDisplayed({ reverse: true });
     }
+
+    // Save needs a country ("Please select the county"); a localite who signed up with only a
+    // zipcode has none. Picking a Location suggestion fills Country, State, and City. A location
+    // that is already set shows as text instead of the placeholder, so then it is kept.
+    const found = await scrollFormTo(this.locationInput).then(() => true, () => false);
+    if (found) {
+      await selectLocation(this.locationInput, data.location);
+    } else {
+      console.info('[INFO] Edit Profile: no empty Location field; keeping the location already set.');
+    }
+  }
+
+  /** Empty "Search location..." field under Location (Country, State, City follow it). */
+  get locationInput() {
+    return inputByHint('Search location');
   }
 
   /**

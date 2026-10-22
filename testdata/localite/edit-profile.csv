@@ -4,8 +4,10 @@
 # The site allows letters only (no digits or spaces) and at most 15 characters in Last Name,
 # so keep the prefix letters-only and 9 characters or fewer.
 # Separate multiple Experiences I Host with |; use the exact option names from the list.
+# Location is picked from the suggestions; it fills Country, State, and City (Save needs a country).
 Field,Value
 First Name,Phuong
 Last Name Prefix,Auto
 Bio,"Local guide and photographer sharing street food, hidden neighborhoods, and city history with curious travelers."
 Experiences I Host,Hiking|Culture & Heritage|Food and Beverage
+Location,"Addison, New York, United States"

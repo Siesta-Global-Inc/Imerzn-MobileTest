@@ -126,11 +126,21 @@ export class MobilePaymentDialog {
     await fillField(this.postalCodeInput, details.billingZip);
   }
 
-  /** Tap Pay and wait for "Payment Successful" (the app then goes back to Experiences). */
+  /**
+   * Tap Pay and wait until the payment is done: "Payment Successful" shows, or the app has already
+   * gone back to Experiences (after a successful payment it navigates there; the message can be gone
+   * before it is seen, as on 2026-10-22 when booking 4058 was paid).
+   */
   async payAndVerify(): Promise<void> {
     await this.swipeDialogTo(this.payButton);
     await this.payButton.click();
-    await this.paymentSuccessfulMessage.waitForDisplayed({ timeout: 120_000 });
+    const backOnExperiences = byLabelStart('Experiences\nTab 1');
+    await browser.waitUntil(
+      async () => (await this.paymentSuccessfulMessage.isDisplayed().catch(() => false))
+        || ((await backOnExperiences.isDisplayed().catch(() => false))
+          && !(await this.payButton.isDisplayed().catch(() => false))),
+      { timeout: 120_000, interval: 2_000, timeoutMsg: 'The payment did not finish: no "Payment Successful" and still not back on Experiences.' },
+    );
   }
 
   /** Tap Cancel (at the bottom of the dialog): the booking is kept but stays unpaid. */
