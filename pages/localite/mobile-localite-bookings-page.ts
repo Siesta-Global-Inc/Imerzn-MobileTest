@@ -185,19 +185,25 @@ export class MobileLocaliteBookingsPage {
     // move its top into the upper half, which brings the buttons under it on screen. The drag is
     // in the middle of the list: the screen's left edge (used by centerOnScreen) is outside this
     // list and does not scroll it.
+    // The card can also be cut off at the top, its traveler/status line hidden under the search bar
+    // (on CI LCN-001 failed on pending booking 4149 like that): then scroll the list up a little
+    // until the whole card shows.
     const { width, height } = await browser.getWindowSize();
     for (let drag = 0; drag < 3; drag += 1) {
       const { y } = await this.card(bookingId).getLocation();
-      if (y <= height * 0.55) {
+      const cutOffAtTop = !(await travelerLine.isDisplayed().catch(() => false));
+      if (!cutOffAtTop && y <= height * 0.55) {
         return;
       }
       const x = Math.round(width / 2);
+      // Cut off at the top: drag down (the list scrolls up); too low: drag up (the list scrolls down).
+      const [from, to] = cutOffAtTop ? [height * 0.4, height * 0.6] : [height * 0.7, height * 0.4];
       await browser
         .action('pointer', { parameters: { pointerType: 'touch' } })
-        .move({ x, y: Math.round(height * 0.7) })
+        .move({ x, y: Math.round(from) })
         .down()
         .pause(100)
-        .move({ duration: 600, x, y: Math.round(height * 0.4) })
+        .move({ duration: 600, x, y: Math.round(to) })
         // Hold still before lifting, so the list does not fling past the card.
         .pause(400)
         .up()
