@@ -9,6 +9,10 @@ on:
         description: 'Run only these test files, comma-separated and in run order (e.g. tests/auth/mobile-login.spec.ts,tests/traveler/mobile-wishlist.spec.ts). Include the tests that create the accounts and data they use. Leave empty to run all.'
         required: false
         default: ''
+  # Every day at 05:30 Vietnam time (GMT+7), which is 22:30 UTC the day before. GitHub schedules
+  # use UTC, run on main, and can start late when GitHub is busy.
+  schedule:
+    - cron: '30 22 * * *'
 
 # One run at a time: runs share the dev site's test accounts. A new push cancels the running one.
 concurrency:
