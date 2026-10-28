@@ -181,9 +181,13 @@ export class MobileBookingSheet {
     await this.bookButton.click();
   }
 
-  /** The next-month arrow has no label; it sits to the right of the month heading. */
+  /**
+   * The next-month arrow has no label; it sits to the right of the month heading ("October 2026").
+   * The day buttons also contain the year ("Thursday, October 29, 2026") but always a comma, so the
+   * heading is the label with a year and no comma (on 2026-10-28 the old selector matched 36 days).
+   */
   private async tapNextMonth(): Promise<void> {
-    const heading = browser.$('//*[@content-desc and contains(@content-desc, " 20") and @clickable="true"][1]');
+    const heading = browser.$('(//*[contains(@content-desc, " 20") and not(contains(@content-desc, ","))])[1]');
     const { x, y, width, height } = await heading.getElementRect(await heading.elementId);
     await browser.execute('mobile: clickGesture', { x: x + width + 100, y: y + height / 2 });
     await browser.pause(1_500);

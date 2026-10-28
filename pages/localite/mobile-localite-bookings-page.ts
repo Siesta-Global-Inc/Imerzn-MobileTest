@@ -191,7 +191,9 @@ export class MobileLocaliteBookingsPage {
     const { width, height } = await browser.getWindowSize();
     for (let drag = 0; drag < 3; drag += 1) {
       const { y } = await this.card(bookingId).getLocation();
-      const cutOffAtTop = !(await travelerLine.isDisplayed().catch(() => false));
+      // Only a card near the top can be under the search bar; a hidden line on a card further down
+      // means it is cut off at the bottom (scrolling up then lost booking 4159 off the screen).
+      const cutOffAtTop = y < height * 0.3 && !(await travelerLine.isDisplayed().catch(() => false));
       if (!cutOffAtTop && y <= height * 0.55) {
         return;
       }
