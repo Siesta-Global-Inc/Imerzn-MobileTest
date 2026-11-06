@@ -1,0 +1,1115 @@
+
+> imerzn-playwright-framework@1.0.0 mobile:test
+> wdio run mobile-wdio.conf.ts
+
+
+Execution of 19 workers started at 2026-11-06T02:48:29.680Z
+
+[0-0] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-0] 2026-11-06T02:48:40.716Z WARN webdriver: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0] 2026-11-06T02:48:44.057Z ERROR webdriver: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0] 2026-11-06T02:48:44.057Z ERROR webdriver: unknown error: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-0]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-0]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-0]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-0]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-0]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-0]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-0]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-0] 2026-11-06T02:48:44.288Z ERROR @wdio/runner: Error: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-0]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-0]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-0]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-0]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-0]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-0]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-0] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-0] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-0] 2026-11-06T02:48:49.470Z WARN webdriver: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0] 2026-11-06T02:48:52.964Z ERROR webdriver: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0] 2026-11-06T02:48:52.965Z ERROR webdriver: unknown error: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-0]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-0]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-0]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-0]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-0]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-0]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-0]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-0] 2026-11-06T02:48:53.109Z ERROR @wdio/runner: Error: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+[0-0]  when running "http://127.0.0.1:4723/session" with method "POST"
+[0-0]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-0]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-0]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-0]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-0]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-0]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-0]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-0] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts (1 retries)
+[0-1] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-1] [DATA] Traveler email: autotraveler+568945@yopmail.com
+[0-1] [STEP] Open Sign Up as a Traveler
+[0-1] [STEP] Fill in and submit the signup form
+[0-1] [STEP] Verify OTP number
+[0-1] 2026-11-06T02:49:56.672Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] [FAILED] Verify OTP number: Can't call setValue on element with selector "//android.widget.EditText" because element wasn't found
+[0-1] Error in "mobile-traveler-signup.mobile AUTH-003 | Traveler can complete the signup process"
+Error: Step "Verify OTP number" failed: Can't call setValue on element with selector "//android.widget.EditText" because element wasn't found
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts:48:5)
+[0-1] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-1] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-1] [DATA] Traveler email: autotraveler+510670@yopmail.com
+[0-1] 2026-11-06T02:51:28.361Z WARN webdriver: WebDriverError: 'com.app.siestaglobal' is still running after 500ms timeout when running "execute/sync" with method "POST"
+[0-1] 2026-11-06T02:51:28.378Z ERROR webdriver: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity processes' exited with code 1'; Command output: adb: device offline
+[0-1]  when running "execute/sync" with method "POST"
+[0-1] 2026-11-06T02:51:28.408Z WARN webdriver: WebDriverError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details when running "screenshot" with method "GET"
+[0-1] 2026-11-06T02:51:28.411Z ERROR webdriver: WebDriverError: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details when running "screenshot" with method "GET"
+[0-1] 2026-11-06T02:51:28.415Z WARN webdriver: WebDriverError: 'GET /session/4f229d13-c4a6-4c0d-9b7d-268e80016199/source' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details when running "source" with method "GET"
+[0-1] 2026-11-06T02:51:28.417Z ERROR webdriver: WebDriverError: 'GET /session/4f229d13-c4a6-4c0d-9b7d-268e80016199/source' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details when running "source" with method "GET"
+[0-1] unknown error in "mobile-traveler-signup.mobile AUTH-003 | Traveler can complete the signup process"
+unknown error: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity processes' exited with code 1'; Command output: adb: device offline
+ when running "execute/sync" with method "POST"
+    at async resetApp (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-app.ts:15:3)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts:33:5)
+[0-1] 2026-11-06T02:51:28.464Z WARN webdriver: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device offline
+[0-1]  when running "http://127.0.0.1:4723/session/4f229d13-c4a6-4c0d-9b7d-268e80016199" with method "DELETE"
+[0-1] 2026-11-06T02:51:28.477Z ERROR @wdio/runner: Failed to end the session: WebDriverError: Request failed with error code UND_ERR_CLOSED when running "http://127.0.0.1:4723/session/4f229d13-c4a6-4c0d-9b7d-268e80016199" with method "DELETE"
+[0-1] The browser may still be running (for example on a cloud service). Close it manually if needed.
+[0-1] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts (1 retries)
+[0-2] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] 2026-11-06T02:51:50.379Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2] 2026-11-06T02:52:10.414Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2] 2026-11-06T02:52:10.415Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-2]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-2]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-2]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-2]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-2]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-2]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-2]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-2] 2026-11-06T02:52:10.592Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-2]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-2]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-2]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-2]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-2]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-2]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-2] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] 2026-11-06T02:52:32.509Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2] 2026-11-06T02:52:52.543Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2] 2026-11-06T02:52:52.543Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-2]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-2]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-2]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-2]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-2]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-2]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-2]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-2] 2026-11-06T02:52:52.696Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-2]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-2]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-2]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-2]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-2]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-2]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-2]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-2] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts (1 retries)
+[0-3] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] 2026-11-06T02:53:14.174Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3] 2026-11-06T02:53:34.199Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3] 2026-11-06T02:53:34.199Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-3]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-3]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-3]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-3]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-3]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-3]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-3]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-3] 2026-11-06T02:53:34.341Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-3]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-3]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-3]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-3]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-3]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-3]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-3] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] 2026-11-06T02:53:55.699Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3] 2026-11-06T02:54:15.737Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3] 2026-11-06T02:54:15.737Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-3]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-3]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-3]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-3]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-3]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-3]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-3]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-3] 2026-11-06T02:54:15.867Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-3]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-3]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-3]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-3]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-3]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-3]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-3]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-3] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts (1 retries)
+[0-4] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] 2026-11-06T02:54:37.452Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4] 2026-11-06T02:54:57.479Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4] 2026-11-06T02:54:57.479Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-4]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-4]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-4]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-4]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-4]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-4]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-4]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-4] 2026-11-06T02:54:57.618Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-4]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-4]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-4]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-4]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-4]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-4]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-4] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] 2026-11-06T02:55:18.940Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4] 2026-11-06T02:55:38.971Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4] 2026-11-06T02:55:38.971Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-4]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-4]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-4]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-4]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-4]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-4]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-4]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-4] 2026-11-06T02:55:39.113Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-4]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-4]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-4]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-4]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-4]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-4]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-4]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-4] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts (1 retries)
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] 2026-11-06T02:56:00.626Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5] 2026-11-06T02:56:20.654Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5] 2026-11-06T02:56:20.654Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-5]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-5]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-5]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-5]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-5]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-5]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-5]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-5] 2026-11-06T02:56:20.794Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-5]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-5]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-5]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-5]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-5]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-5]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-5] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] 2026-11-06T02:56:42.144Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5] 2026-11-06T02:57:02.167Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5] 2026-11-06T02:57:02.167Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-5]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-5]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-5]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-5]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-5]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-5]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-5]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-5] 2026-11-06T02:57:02.299Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-5]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-5]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-5]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-5]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-5]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-5]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-5]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-5] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts (1 retries)
+[0-6] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] 2026-11-06T02:57:23.718Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6] 2026-11-06T02:57:43.753Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6] 2026-11-06T02:57:43.753Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-6]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-6]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-6]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-6]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-6]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-6]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-6]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-6] 2026-11-06T02:57:43.884Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-6]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-6]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-6]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-6]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-6]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-6]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-6] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] 2026-11-06T02:58:05.266Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6] 2026-11-06T02:58:25.292Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6] 2026-11-06T02:58:25.292Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-6]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-6]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-6]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-6]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-6]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-6]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-6]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-6] 2026-11-06T02:58:25.427Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-6]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-6]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-6]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-6]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-6]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-6]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-6]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-6] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts (1 retries)
+[0-7] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] 2026-11-06T02:58:46.859Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7] 2026-11-06T02:59:06.881Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7] 2026-11-06T02:59:06.881Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-7]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-7]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-7]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-7]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-7]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-7]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-7]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-7] 2026-11-06T02:59:07.006Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-7]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-7]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-7]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-7]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-7]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-7]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-7] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] 2026-11-06T02:59:28.314Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7] 2026-11-06T02:59:48.338Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7] 2026-11-06T02:59:48.338Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-7]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-7]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-7]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-7]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-7]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-7]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-7]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-7] 2026-11-06T02:59:48.460Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-7]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-7]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-7]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-7]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-7]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-7]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-7]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-7] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts (1 retries)
+[0-8] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-8] 2026-11-06T03:00:09.868Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8] 2026-11-06T03:00:29.889Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8] 2026-11-06T03:00:29.889Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-8]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-8]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-8]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-8]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-8]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-8]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-8]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-8] 2026-11-06T03:00:30.023Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-8]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-8]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-8]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-8]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-8]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-8]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-8] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-8] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-8] 2026-11-06T03:00:51.358Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8] 2026-11-06T03:01:11.385Z ERROR webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8] 2026-11-06T03:01:11.385Z ERROR webdriver: unknown error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8]     at FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2584:19)
+[0-8]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-8]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-8]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-8]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-8]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-8]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-8]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-8] 2026-11-06T03:01:11.539Z ERROR @wdio/runner: Error: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[0-8]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-8]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-8]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-8]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-8]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-8]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-8]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-8] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts (1 retries)
+[0-9] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-9] 2026-11-06T03:01:33.159Z WARN webdriver: WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+2026-11-06T03:01:48.477Z ERROR @wdio/appium-service: Appium exited before timeout (exit code: 1)
+[0-9] 2026-11-06T03:01:48.627Z ERROR webdriver: WebDriverError: Request failed with error code UND_ERR_SOCKET when running "http://127.0.0.1:4723/session" with method "POST"
+[0-9] 2026-11-06T03:01:48.627Z ERROR webdriver: Error: WebDriverError: Request failed with error code UND_ERR_SOCKET when running "http://127.0.0.1:4723/session" with method "POST"
+[0-9]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-9]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-9]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-9]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-9]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-9]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-9]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-9]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-9] 2026-11-06T03:01:48.628Z ERROR @wdio/runner: Error: WebDriverError: Request failed with error code UND_ERR_SOCKET when running "http://127.0.0.1:4723/session" with method "POST"
+[0-9]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-9]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-9]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-9]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-9]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-9]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-9] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-9] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-9] 2026-11-06T03:01:50.107Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-9] 2026-11-06T03:01:50.120Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-9] 2026-11-06T03:01:50.120Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-9]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-9]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-9]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-9]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-9]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-9]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-9]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-9]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-9]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-9] 2026-11-06T03:01:50.121Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-9] It seems like the service failed to start or is rejecting any connections.
+[0-9]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-9]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-9]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-9]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-9]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-9]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-9]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-9] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts (1 retries)
+[0-10] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-10] 2026-11-06T03:01:51.758Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-10] 2026-11-06T03:01:51.763Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-10] 2026-11-06T03:01:51.763Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-10]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-10]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-10]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-10]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-10]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-10]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-10]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-10]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-10]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-10] 2026-11-06T03:01:51.764Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-10] It seems like the service failed to start or is rejecting any connections.
+[0-10]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-10]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-10]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-10]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-10]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-10]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-10]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-10] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-10] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-10] 2026-11-06T03:01:53.281Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-10] 2026-11-06T03:01:53.299Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-10] 2026-11-06T03:01:53.299Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-10]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-10]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-10]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-10]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-10]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-10]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-10]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-10]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-10]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-10] 2026-11-06T03:01:53.300Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-10] It seems like the service failed to start or is rejecting any connections.
+[0-10]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-10]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-10]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-10]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-10]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-10]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-10]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-10] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts (1 retries)
+[0-11] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] 2026-11-06T03:01:54.892Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-11] 2026-11-06T03:01:54.897Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-11] 2026-11-06T03:01:54.898Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-11]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-11]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-11]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-11]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-11]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-11]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-11]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-11]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-11]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-11] 2026-11-06T03:01:54.898Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-11] It seems like the service failed to start or is rejecting any connections.
+[0-11]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-11]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-11]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-11]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-11]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-11]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-11]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-11] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] 2026-11-06T03:01:56.347Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-11] 2026-11-06T03:01:56.352Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-11] 2026-11-06T03:01:56.352Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-11]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-11]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-11]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-11]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-11]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-11]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-11]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-11]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-11]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-11] 2026-11-06T03:01:56.353Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-11] It seems like the service failed to start or is rejecting any connections.
+[0-11]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-11]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-11]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-11]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-11]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-11]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-11]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-11] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts (1 retries)
+[0-12] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts
+[0-12] 2026-11-06T03:01:57.896Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-12] 2026-11-06T03:01:57.902Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-12] 2026-11-06T03:01:57.902Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-12]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-12]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-12]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-12]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-12]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-12]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-12]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-12]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-12]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-12] 2026-11-06T03:01:57.902Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-12] It seems like the service failed to start or is rejecting any connections.
+[0-12]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-12]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-12]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-12]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-12]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-12]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-12]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-12] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts
+[0-12] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts
+[0-12] 2026-11-06T03:01:59.332Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-12] 2026-11-06T03:01:59.344Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-12] 2026-11-06T03:01:59.345Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-12]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-12]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-12]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-12]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-12]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-12]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-12]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-12]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-12]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-12] 2026-11-06T03:01:59.345Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-12] It seems like the service failed to start or is rejecting any connections.
+[0-12]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-12]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-12]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-12]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-12]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-12]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-12]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-12] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts (1 retries)
+[0-13] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts
+[0-13] 2026-11-06T03:02:01.106Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-13] 2026-11-06T03:02:01.118Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-13] 2026-11-06T03:02:01.118Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-13]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-13]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-13]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-13]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-13]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-13]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-13]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-13]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-13]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-13] 2026-11-06T03:02:01.119Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-13] It seems like the service failed to start or is rejecting any connections.
+[0-13]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-13]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-13]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-13]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-13]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-13]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-13]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-13] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts
+[0-13] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts
+[0-13] 2026-11-06T03:02:02.586Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-13] 2026-11-06T03:02:02.599Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-13] 2026-11-06T03:02:02.600Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-13]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-13]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-13]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-13]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-13]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-13]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-13]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-13]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-13]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-13] 2026-11-06T03:02:02.601Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-13] It seems like the service failed to start or is rejecting any connections.
+[0-13]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-13]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-13]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-13]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-13]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-13]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-13]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-13] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts (1 retries)
+[0-14] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-14] 2026-11-06T03:02:04.223Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-14] 2026-11-06T03:02:04.245Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-14] 2026-11-06T03:02:04.245Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-14]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-14]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-14]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-14]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-14]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-14]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-14]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-14]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-14]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-14] 2026-11-06T03:02:04.246Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-14] It seems like the service failed to start or is rejecting any connections.
+[0-14]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-14]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-14]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-14]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-14]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-14]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-14]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-14] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-14] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-14] 2026-11-06T03:02:05.699Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-14] 2026-11-06T03:02:05.717Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-14] 2026-11-06T03:02:05.718Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-14]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-14]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-14]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-14]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-14]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-14]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-14]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-14]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-14]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-14] 2026-11-06T03:02:05.718Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-14] It seems like the service failed to start or is rejecting any connections.
+[0-14]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-14]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-14]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-14]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-14]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-14]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-14]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-14] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts (1 retries)
+[0-15] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-15] 2026-11-06T03:02:07.314Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-15] 2026-11-06T03:02:07.329Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-15] 2026-11-06T03:02:07.329Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-15]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-15]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-15]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-15]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-15]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-15]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-15]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-15]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-15]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-15] 2026-11-06T03:02:07.330Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-15] It seems like the service failed to start or is rejecting any connections.
+[0-15]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-15]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-15]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-15]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-15]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-15]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-15]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-15] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-15] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-15] 2026-11-06T03:02:08.780Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-15] 2026-11-06T03:02:08.792Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-15] 2026-11-06T03:02:08.793Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-15]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-15]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-15]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-15]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-15]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-15]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-15]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-15]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-15]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-15] 2026-11-06T03:02:08.793Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-15] It seems like the service failed to start or is rejecting any connections.
+[0-15]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-15]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-15]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-15]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-15]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-15]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-15]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-15] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts (1 retries)
+[0-16] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-16] 2026-11-06T03:02:10.359Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-16] 2026-11-06T03:02:10.364Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-16] 2026-11-06T03:02:10.365Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-16]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-16]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-16]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-16]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-16]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-16]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-16]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-16]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-16]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-16] 2026-11-06T03:02:10.365Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-16] It seems like the service failed to start or is rejecting any connections.
+[0-16]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-16]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-16]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-16]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-16]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-16]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-16]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-16] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-16] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-16] 2026-11-06T03:02:11.789Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-16] 2026-11-06T03:02:11.793Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-16] 2026-11-06T03:02:11.793Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-16]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-16]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-16]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-16]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-16]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-16]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-16]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-16]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-16]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-16] 2026-11-06T03:02:11.793Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-16] It seems like the service failed to start or is rejecting any connections.
+[0-16]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-16]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-16]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-16]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-16]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-16]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-16]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-16] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts (1 retries)
+[0-17] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-17] 2026-11-06T03:02:13.367Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-17] 2026-11-06T03:02:13.380Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-17] 2026-11-06T03:02:13.381Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-17]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-17]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-17]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-17]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-17]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-17]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-17]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-17]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-17]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-17] 2026-11-06T03:02:13.381Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-17] It seems like the service failed to start or is rejecting any connections.
+[0-17]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-17]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-17]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-17]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-17]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-17]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-17]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-17] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-17] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-17] 2026-11-06T03:02:14.811Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-17] 2026-11-06T03:02:14.816Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-17] 2026-11-06T03:02:14.816Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-17]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-17]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-17]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-17]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-17]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-17]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-17]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-17]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-17]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-17] 2026-11-06T03:02:14.817Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-17] It seems like the service failed to start or is rejecting any connections.
+[0-17]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-17]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-17]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-17]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-17]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-17]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-17]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-17] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts (1 retries)
+[0-18] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] 2026-11-06T03:02:16.388Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-18] 2026-11-06T03:02:16.406Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-18] 2026-11-06T03:02:16.407Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-18]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-18]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-18]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-18]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-18]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-18]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-18]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-18]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-18]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-18] 2026-11-06T03:02:16.407Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-18] It seems like the service failed to start or is rejecting any connections.
+[0-18]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-18]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-18]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-18]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-18]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-18]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-18]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-18] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] 2026-11-06T03:02:17.847Z WARN webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-18] 2026-11-06T03:02:17.851Z ERROR webdriver: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-18] 2026-11-06T03:02:17.851Z ERROR webdriver: Error: WebDriverError: Request failed with error code ECONNREFUSED when running "http://127.0.0.1:4723/session" with method "POST"
+[0-18]     at FetchRequest._libRequest (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2515:13)
+[0-18]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-18]     at async FetchRequest._request (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2549:20)
+[0-18]     at async startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1552:16)
+[0-18]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-18]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-18]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-18]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-18]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-18] 2026-11-06T03:02:17.851Z ERROR @wdio/runner: Error: Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+[0-18] It seems like the service failed to start or is rejecting any connections.
+[0-18]     at startWebDriverSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:1556:11)
+[0-18]     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[0-18]     at async _WebDriver.newSession (file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriver/build/node.js:2021:41)
+[0-18]     at async remote (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/webdriverio/build/node.js:17502:20)
+[0-18]     at async Runner._startSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:891:24)
+[0-18]     at async Runner._initSession (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:865:22)
+[0-18]     at async Runner.run (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/node_modules/@wdio/runner/build/index.js:756:16)
+[0-18] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts (1 retries)
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[Android Android undefined #0-0] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-0]
+[Android Android undefined #0-0] ✖ Failed to create a session:
+[Android Android undefined #0-0] WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+ when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-0]
+------------------------------------------------------------------
+[Android Android undefined #0-0] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-0]
+[Android Android undefined #0-0] ✖ Failed to create a session:
+[Android Android undefined #0-0] WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell ime enable io.appium.settings/.EmptyIME' exited with code 255'; Command output: Unknown input method io.appium.settings/.EmptyIME cannot be enabled for user #0
+ when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-0]
+------------------------------------------------------------------
+[app-debug.apk Android #0-1] Running: app-debug.apk on Android
+[app-debug.apk Android #0-1] Session ID: 09612958-c83a-44ab-b757-34872d97dbac
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] » tests/auth/mobile-traveler-signup.spec.ts
+[app-debug.apk Android #0-1] mobile-traveler-signup
+[app-debug.apk Android #0-1]    ✖ mobile AUTH-003 | Traveler can complete the signup process
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] 1 failing (1m 3.6s)
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] 1) mobile-traveler-signup mobile AUTH-003 | Traveler can complete the signup process
+[app-debug.apk Android #0-1] Step "Verify OTP number" failed: Can't call setValue on element with selector "//android.widget.EditText" because element wasn't found
+[app-debug.apk Android #0-1] Error: Step "Verify OTP number" failed: Can't call setValue on element with selector "//android.widget.EditText" because element wasn't found
+[app-debug.apk Android #0-1]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-1]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts:48:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-1] Running: app-debug.apk on Android
+[app-debug.apk Android #0-1] Session ID: 4f229d13-c4a6-4c0d-9b7d-268e80016199
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] » tests/auth/mobile-traveler-signup.spec.ts
+[app-debug.apk Android #0-1] mobile-traveler-signup
+[app-debug.apk Android #0-1]    ✖ mobile AUTH-003 | Traveler can complete the signup process
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] 1 failing (50.1s)
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] 1) mobile-traveler-signup mobile AUTH-003 | Traveler can complete the signup process
+[app-debug.apk Android #0-1] WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity processes' exited with code 1'; Command output: adb: device offline
+ when running "execute/sync" with method "POST"
+[app-debug.apk Android #0-1] unknown error: WebDriverError: Error executing adbExec. Original error: 'Command '/usr/local/lib/android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys activity processes' exited with code 1'; Command output: adb: device offline
+[app-debug.apk Android #0-1]  when running "execute/sync" with method "POST"
+[app-debug.apk Android #0-1]     at async resetApp (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-app.ts:15:3)
+[app-debug.apk Android #0-1]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts:33:5)
+------------------------------------------------------------------
+[Android Android undefined #0-2] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-2]
+[Android Android undefined #0-2] ✖ Failed to create a session:
+[Android Android undefined #0-2] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-2]
+------------------------------------------------------------------
+[Android Android undefined #0-2] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-2]
+[Android Android undefined #0-2] ✖ Failed to create a session:
+[Android Android undefined #0-2] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-2]
+------------------------------------------------------------------
+[Android Android undefined #0-3] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-3]
+[Android Android undefined #0-3] ✖ Failed to create a session:
+[Android Android undefined #0-3] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-3]
+------------------------------------------------------------------
+[Android Android undefined #0-3] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-3]
+[Android Android undefined #0-3] ✖ Failed to create a session:
+[Android Android undefined #0-3] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-3]
+------------------------------------------------------------------
+[Android Android undefined #0-4] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-4]
+[Android Android undefined #0-4] ✖ Failed to create a session:
+[Android Android undefined #0-4] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-4]
+------------------------------------------------------------------
+[Android Android undefined #0-4] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-4]
+[Android Android undefined #0-4] ✖ Failed to create a session:
+[Android Android undefined #0-4] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-4]
+------------------------------------------------------------------
+[Android Android undefined #0-5] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-5]
+[Android Android undefined #0-5] ✖ Failed to create a session:
+[Android Android undefined #0-5] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-5]
+------------------------------------------------------------------
+[Android Android undefined #0-5] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-5]
+[Android Android undefined #0-5] ✖ Failed to create a session:
+[Android Android undefined #0-5] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-5]
+------------------------------------------------------------------
+[Android Android undefined #0-6] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-6]
+[Android Android undefined #0-6] ✖ Failed to create a session:
+[Android Android undefined #0-6] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-6]
+------------------------------------------------------------------
+[Android Android undefined #0-6] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-6]
+[Android Android undefined #0-6] ✖ Failed to create a session:
+[Android Android undefined #0-6] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-6]
+------------------------------------------------------------------
+[Android Android undefined #0-7] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-7]
+[Android Android undefined #0-7] ✖ Failed to create a session:
+[Android Android undefined #0-7] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-7]
+------------------------------------------------------------------
+[Android Android undefined #0-7] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-7]
+[Android Android undefined #0-7] ✖ Failed to create a session:
+[Android Android undefined #0-7] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-7]
+------------------------------------------------------------------
+[Android Android undefined #0-8] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-8]
+[Android Android undefined #0-8] ✖ Failed to create a session:
+[Android Android undefined #0-8] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-8]
+------------------------------------------------------------------
+[Android Android undefined #0-8] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-8]
+[Android Android undefined #0-8] ✖ Failed to create a session:
+[Android Android undefined #0-8] WebDriverError: Could not find a connected Android device in 20000ms when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-8]
+------------------------------------------------------------------
+[Android Android undefined #0-9] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-9]
+[Android Android undefined #0-9] ✖ Failed to create a session:
+[Android Android undefined #0-9] WebDriverError: Request failed with error code UND_ERR_SOCKET when running "http://127.0.0.1:4723/session" with method "POST"
+[Android Android undefined #0-9]
+------------------------------------------------------------------
+[Android Android undefined #0-9] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-9]
+[Android Android undefined #0-9] ✖ Failed to create a session:
+[Android Android undefined #0-9] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-9]
+------------------------------------------------------------------
+[Android Android undefined #0-10] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-10]
+[Android Android undefined #0-10] ✖ Failed to create a session:
+[Android Android undefined #0-10] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-10]
+------------------------------------------------------------------
+[Android Android undefined #0-10] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-10]
+[Android Android undefined #0-10] ✖ Failed to create a session:
+[Android Android undefined #0-10] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-10]
+------------------------------------------------------------------
+[Android Android undefined #0-11] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-11]
+[Android Android undefined #0-11] ✖ Failed to create a session:
+[Android Android undefined #0-11] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-11]
+------------------------------------------------------------------
+[Android Android undefined #0-11] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-11]
+[Android Android undefined #0-11] ✖ Failed to create a session:
+[Android Android undefined #0-11] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-11]
+------------------------------------------------------------------
+[Android Android undefined #0-12] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-12]
+[Android Android undefined #0-12] ✖ Failed to create a session:
+[Android Android undefined #0-12] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-12]
+------------------------------------------------------------------
+[Android Android undefined #0-12] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-12]
+[Android Android undefined #0-12] ✖ Failed to create a session:
+[Android Android undefined #0-12] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-12]
+------------------------------------------------------------------
+[Android Android undefined #0-13] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-13]
+[Android Android undefined #0-13] ✖ Failed to create a session:
+[Android Android undefined #0-13] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-13]
+------------------------------------------------------------------
+[Android Android undefined #0-13] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-13]
+[Android Android undefined #0-13] ✖ Failed to create a session:
+[Android Android undefined #0-13] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-13]
+------------------------------------------------------------------
+[Android Android undefined #0-14] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-14]
+[Android Android undefined #0-14] ✖ Failed to create a session:
+[Android Android undefined #0-14] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-14]
+------------------------------------------------------------------
+[Android Android undefined #0-14] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-14]
+[Android Android undefined #0-14] ✖ Failed to create a session:
+[Android Android undefined #0-14] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-14]
+------------------------------------------------------------------
+[Android Android undefined #0-15] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-15]
+[Android Android undefined #0-15] ✖ Failed to create a session:
+[Android Android undefined #0-15] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-15]
+------------------------------------------------------------------
+[Android Android undefined #0-15] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-15]
+[Android Android undefined #0-15] ✖ Failed to create a session:
+[Android Android undefined #0-15] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-15]
+------------------------------------------------------------------
+[Android Android undefined #0-16] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-16]
+[Android Android undefined #0-16] ✖ Failed to create a session:
+[Android Android undefined #0-16] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-16]
+------------------------------------------------------------------
+[Android Android undefined #0-16] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-16]
+[Android Android undefined #0-16] ✖ Failed to create a session:
+[Android Android undefined #0-16] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-16]
+------------------------------------------------------------------
+[Android Android undefined #0-17] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-17]
+[Android Android undefined #0-17] ✖ Failed to create a session:
+[Android Android undefined #0-17] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-17]
+------------------------------------------------------------------
+[Android Android undefined #0-17] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-17]
+[Android Android undefined #0-17] ✖ Failed to create a session:
+[Android Android undefined #0-17] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-17]
+------------------------------------------------------------------
+[Android Android undefined #0-18] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-18]
+[Android Android undefined #0-18] ✖ Failed to create a session:
+[Android Android undefined #0-18] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-18]
+------------------------------------------------------------------
+[Android Android undefined #0-18] Running: Android on Android undefined executing com.app.siestaglobal
+[Android Android undefined #0-18]
+[Android Android undefined #0-18] ✖ Failed to create a session:
+[Android Android undefined #0-18] Unable to connect to "http://127.0.0.1:4723/", make sure browser driver is running on that address.
+It seems like the service failed to start or is rejecting any connections.
+[Android Android undefined #0-18]
+
+
+Spec Files:	 0 passed, 19 retries, 19 failed, 19 total (100% completed) in 00:13:48  
+
