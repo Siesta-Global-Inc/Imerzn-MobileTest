@@ -1,0 +1,605 @@
+
+> imerzn-playwright-framework@1.0.0 mobile:test
+> wdio run mobile-wdio.conf.ts
+
+
+Execution of 19 workers started at 2026-11-12T03:19:44.207Z
+
+[0-0] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-0] [STEP] Log in with an unregistered email
+[0-0] [STEP] Verify the login error message
+[0-0] [STEP] Log in with a registered account
+[0-0] [STEP] Verify the Profile screen
+[0-0] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-login.spec.ts
+[0-1] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-1] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-1] [STEP] Open Sign Up as a Traveler
+[0-1] [STEP] Fill in and submit the signup form
+[0-1] [STEP] Verify OTP number
+[0-1] [STEP] Upload and save profile picture
+[0-1] 2026-11-12T03:21:24.768Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-11-12T03:21:24.911Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] [STEP] Select location and submit profile
+[0-1] 2026-11-12T03:21:42.145Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-11-12T03:21:42.358Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-11-12T03:21:47.018Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] 2026-11-12T03:21:47.279Z WARN webdriver: Request encountered a stale element - terminating request
+[0-1] [STEP] Verify the traveler is signed in
+[0-1] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-traveler-signup.spec.ts
+[0-2] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-2] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-2] [STEP] Sign up as a new Localite
+[0-2] [STEP] Verify phone number
+[0-2] [STEP] Create the localite profile
+[0-2] 2026-11-12T03:22:21.228Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] 2026-11-12T03:22:21.422Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] 2026-11-12T03:22:35.147Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] 2026-11-12T03:22:35.268Z WARN webdriver: Request encountered a stale element - terminating request
+[0-2] [STEP] Close the profile updated popup
+[0-2] [STEP] Sign in to the admin portal
+[0-2] [STEP] Open the new localite in admin Users
+[0-2] [STEP] Mark the localite as Verified
+[0-2] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/auth/mobile-localite-signup-and-verify.spec.ts
+[0-3] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-3] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-3] [DATA] Experience title: Mobile-Automation Experience - 68327
+[0-3] [STEP] Log in as localite
+[0-3] [STEP] Fill in the Create Experience form
+[0-3] 2026-11-12T03:23:32.696Z WARN webdriver: Request encountered a stale element - terminating request
+[0-3] 2026-11-12T03:23:32.874Z WARN webdriver: Request encountered a stale element - terminating request
+[0-3] [STEP] Recheck Know Before You Go and tap Price
+[0-3] [STEP] Publish the experience
+[0-3] [STEP] Verify the experience on the Profile
+[0-3] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-experience.spec.ts
+[0-4] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-4] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-4] [DATA] Gallery title: Mobile-Gallery 837584
+[0-4] [STEP] Log in as localite
+[0-4] [STEP] Fill in the Create Gallery form
+[0-4] 2026-11-12T03:25:55.646Z WARN webdriver: Request encountered a stale element - terminating request
+[0-4] 2026-11-12T03:25:55.917Z WARN webdriver: Request encountered a stale element - terminating request
+[0-4] [STEP] Save the gallery
+[0-4] [STEP] Verify the gallery on the Profile
+[0-4] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-create-gallery.spec.ts
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-5] [DATA] New localite name: Phuong Autofeyuwq
+[0-5] [STEP] Log in as localite
+[0-5] [STEP] Edit name, bio, and experiences
+[0-5] 2026-11-12T03:26:46.992Z WARN webdriver: Request encountered a stale element - terminating request
+[0-5] [FAILED] Edit name, bio, and experiences: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+[0-5] Error in "mobile-edit-profile.mobile PRF-002 | Localite edits name, bio, and hosted experiences"
+Error: Step "Edit name, bio, and experiences" failed: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:31:5)
+[0-5] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts
+[0-5] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-5] [DATA] New localite name: Phuong Autohrawrc
+[0-5] [STEP] Log in as localite
+[0-5] [STEP] Edit name, bio, and experiences
+[0-5] 2026-11-12T03:28:03.401Z WARN webdriver: Request encountered a stale element - terminating request
+[0-5] [FAILED] Edit name, bio, and experiences: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+[0-5] Error in "mobile-edit-profile.mobile PRF-002 | Localite edits name, bio, and hosted experiences"
+Error: Step "Edit name, bio, and experiences" failed: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:31:5)
+[0-5] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts (1 retries)
+[0-6] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-6] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-6] [STEP] Log in as localite
+[0-6] [STEP] Open Preview Profile
+[0-6] [STEP] Verify profile details on the preview
+[0-6] [STEP] Verify the created gallery and experience
+[0-6] [STEP] Go back to the Profile
+[0-6] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-preview-profile.spec.ts
+[0-7] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-7] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-7] [STEP] Log in as localite
+[0-7] [STEP] Open the share sheet
+[0-7] [DATA] Shared link: https://imerzn.com/local-guides/auto-mobile-jir
+[0-7] [STEP] Close the share sheet
+[0-7] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-share-profile.spec.ts
+[0-8] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-8] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-8] [STEP] Log in as localite
+[0-8] [STEP] Sync Calendar shows the Choose Calendar dialog
+[0-8] [STEP] Experiences shows the Experiences screen
+[0-8] [STEP] Localites shows the Localites screen
+[0-8] [STEP] Referral Program shows the Referral Program screen
+[0-8] [STEP] Premium Placement opens the web page
+[0-8] [STEP] Affiliate Partner opens the web page
+[0-8] [STEP] Payouts shows the Payouts dialog
+[0-8] [STEP] About Us shows the About Us screen
+[0-8] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-left-menu.spec.ts
+[0-9] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-9] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-9] [STEP] Log in as localite
+[0-9] [STEP] Change password
+[0-9] [INFO] App message after Update Password: Your password has been updated successfully
+[0-9] [STEP] Log in with the new password
+[0-9] 2026-11-12T03:31:34.453Z WARN webdriver: WebDriverError: Timed out after 10057ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-9] 2026-11-12T03:31:49.249Z ERROR webdriver: WebDriverError: Timed out after 14784ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-9] 2026-11-12T03:31:59.762Z WARN webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-9] 2026-11-12T03:32:10.275Z ERROR webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-9] 2026-11-12T03:32:20.800Z WARN webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-9] 2026-11-12T03:32:31.325Z ERROR webdriver: WebDriverError: Timed out after 10501ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-9] [INFO] The app is not in front (com.android.chrome); reopening it.
+[0-9] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-localite-settings.spec.ts
+[0-10] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-10] [DATA] Referrer: phuonglocalite15@yopmail.com, referee: phuongReferee1@yopmail.com, traveler: travelerReferal@yopmail.com
+[0-10] [STEP] Referrer: check Referral History
+[0-10] [DATA] Referral History before: Referral % 25%, Total Earned $372, Withdrawable $208, Status Active, Withdraw button shown
+[0-10] [STEP] Referee: check a completable booking in Transactions
+[0-10] 2026-11-12T03:33:32.465Z WARN webdriver: WebDriverError: Timed out after 10041ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:33:47.516Z ERROR webdriver: WebDriverError: Timed out after 15037ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:33:58.029Z WARN webdriver: WebDriverError: Timed out after 10501ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:34:08.542Z ERROR webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:34:19.067Z WARN webdriver: WebDriverError: Timed out after 10501ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-10] 2026-11-12T03:34:29.594Z ERROR webdriver: WebDriverError: Timed out after 10501ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-10] [INFO] The app is not in front (com.android.chrome); reopening it.
+[0-10] [SKIPPED] No paid On Going booking could be completed yet ("Complete Booking" appears only after the booking's start time), so the referral earning and withdraw checks were skipped this run.
+[0-10] [STEP] Referee: complete the booking
+[0-10] [STEP] Referrer: verify the new Withdrawable and Total Earned
+[0-10] [STEP] Referrer: withdraw the earnings
+[0-10] [STEP] Traveler: open "Experience For Referral"
+[0-10] 2026-11-12T03:35:02.036Z WARN webdriver: Request encountered a stale element - terminating request
+[0-10] 2026-11-12T03:35:02.152Z WARN webdriver: Request encountered a stale element - terminating request
+[0-10] [FAILED] Traveler: open "Experience For Referral": element ("//*[starts-with(@content-desc, "Experience For Referral
+[0-10] ")]") still not displayed after 5000ms
+[0-10] Error in "mobile-referral-program.mobile REF-001 | Referral program: referrer earns Referral % of the commission and withdraws it"
+Error: Step "Traveler: open "Experience For Referral"" failed: element ("//*[starts-with(@content-desc, "Experience For Referral
+")]") still not displayed after 5000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts:150:5)
+[0-10] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-10] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts
+[0-10] [DATA] Referrer: phuonglocalite15@yopmail.com, referee: phuongReferee1@yopmail.com, traveler: travelerReferal@yopmail.com
+[0-10] [STEP] Referrer: check Referral History
+[0-10] [DATA] Referral History before: Referral % 25%, Total Earned $372, Withdrawable $208, Status Active, Withdraw button shown
+[0-10] [STEP] Referee: check a completable booking in Transactions
+[0-10] 2026-11-12T03:37:42.518Z WARN webdriver: WebDriverError: Timed out after 10040ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:37:57.566Z ERROR webdriver: WebDriverError: Timed out after 15036ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:38:08.081Z WARN webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:38:18.595Z ERROR webdriver: WebDriverError: Timed out after 10501ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-10] 2026-11-12T03:38:29.124Z WARN webdriver: WebDriverError: Timed out after 10504ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-10] 2026-11-12T03:38:39.650Z ERROR webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-10] [INFO] The app is not in front (com.android.chrome); reopening it.
+[0-10] [SKIPPED] No paid On Going booking could be completed yet ("Complete Booking" appears only after the booking's start time), so the referral earning and withdraw checks were skipped this run.
+[0-10] [STEP] Referee: complete the booking
+[0-10] [STEP] Referrer: verify the new Withdrawable and Total Earned
+[0-10] [STEP] Referrer: withdraw the earnings
+[0-10] [STEP] Traveler: open "Experience For Referral"
+[0-10] 2026-11-12T03:39:14.635Z WARN webdriver: Request encountered a stale element - terminating request
+[0-10] 2026-11-12T03:39:14.730Z WARN webdriver: Request encountered a stale element - terminating request
+[0-10] [FAILED] Traveler: open "Experience For Referral": element ("//*[starts-with(@content-desc, "Experience For Referral
+[0-10] ")]") still not displayed after 5000ms
+[0-10] Error in "mobile-referral-program.mobile REF-001 | Referral program: referrer earns Referral % of the commission and withdraws it"
+Error: Step "Traveler: open "Experience For Referral"" failed: element ("//*[starts-with(@content-desc, "Experience For Referral
+")]") still not displayed after 5000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at process.processTimers (node:internal/timers:518:9)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts:150:5)
+[0-10] FAILED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts (1 retries)
+[0-11] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-11] [DATA] Story title: Mobile-My Story 987914
+[0-11] [STEP] Log in as traveler
+[0-11] [STEP] Fill in the story
+[0-11] 2026-11-12T03:41:25.497Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] 2026-11-12T03:41:27.012Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] [FAILED] Fill in the story: element ("(//android.widget.EditText)[2]") still not displayed after 10000ms
+[0-11] Error in "mobile-stories.mobile STR-001 | Traveler shares a story after login and it appears in Stories"
+Error: Step "Fill in the story" failed: element ("(//android.widget.EditText)[2]") still not displayed after 10000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts:36:5)
+[0-11] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts
+[0-11] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-11] [DATA] Story title: Mobile-My Story 139657
+[0-11] [STEP] Log in as traveler
+[0-11] [STEP] Fill in the story
+[0-11] 2026-11-12T03:42:02.324Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] 2026-11-12T03:42:02.680Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] [STEP] Submit the story
+[0-11] [STEP] Open Stories
+[0-11] [STEP] Verify the story in My Stories
+[0-11] 2026-11-12T03:42:45.645Z WARN webdriver: Request encountered a stale element - terminating request
+[0-11] [STEP] Verify the story in public Stories
+[0-11] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts (1 retries)
+[0-12] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts
+[0-12] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-12] [STEP] Log in as traveler
+[0-12] 2026-11-12T03:43:03.601Z WARN webdriver: Request encountered a stale element - terminating request
+[0-12] 2026-11-12T03:43:03.659Z WARN webdriver: Request encountered a stale element - terminating request
+[0-12] [STEP] Edit name and phone
+[0-12] [STEP] Verify the saved details
+[0-12] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-edit-profile.spec.ts
+[0-13] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts
+[0-13] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-13] [DATA] Wishlist name: Mobile-Wishlist 721041
+[0-13] [STEP] Log in as traveler
+[0-13] 2026-11-12T03:43:33.869Z WARN webdriver: Request encountered a stale element - terminating request
+[0-13] 2026-11-12T03:43:33.977Z WARN webdriver: Request encountered a stale element - terminating request
+[0-13] [STEP] Create a wishlist
+[0-13] [STEP] Open Experiences
+[0-13] [DATA] Experience: Mobile-Automation Experience - 68327
+[0-13] [STEP] Save the experience to the wishlist
+[0-13] 2026-11-12T03:43:45.328Z WARN webdriver: Request encountered a stale element - terminating request
+[0-13] 2026-11-12T03:43:45.405Z WARN webdriver: Request encountered a stale element - terminating request
+[0-13] [STEP] Verify the experience in the wishlist
+[0-13] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-wishlist.spec.ts
+[0-14] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-14] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-14] [DATA] Experience: Mobile-Automation Experience - 68327
+[0-14] [STEP] Log in as traveler
+[0-14] 2026-11-12T03:44:09.295Z WARN webdriver: Request encountered a stale element - terminating request
+[0-14] 2026-11-12T03:44:09.437Z WARN webdriver: Request encountered a stale element - terminating request
+[0-14] [STEP] Paid booking: open the experience and fill in the booking
+[0-14] [DATA] Paid booking: 11-13-2026 9:00 AM, 4 people
+[0-14] [STEP] Paid booking: Book and verify the Payment prices
+[0-14] [STEP] Paid booking: pay with card
+[0-14] [STEP] Paid booking: find the booking in Bookings
+[0-14] [DATA] Paid booking: Booking ID 4355, status "On Going"
+[0-14] [STEP] Pending booking: open the experience and fill in the booking
+[0-14] [DATA] Pending booking: 11-14-2026 9:00 AM, 3 people
+[0-14] [STEP] Pending booking: Book and verify the Payment prices
+[0-14] [STEP] Pending booking: cancel Payment (booking stays pending)
+[0-14] [STEP] Pending booking: find the booking in Bookings
+[0-14] [DATA] Pending booking: Booking ID 4356, status "Pending"
+[0-14] [STEP] Paid booking 2: open the experience and fill in the booking
+[0-14] [DATA] Paid booking 2: 11-15-2026 9:00 AM, 2 people
+[0-14] [STEP] Paid booking 2: Book and verify the Payment prices
+[0-14] [STEP] Paid booking 2: pay with card
+[0-14] [STEP] Paid booking 2: find the booking in Bookings
+[0-14] [DATA] Paid booking 2: Booking ID 4357, status "On Going"
+[0-14] [STEP] Pending booking 2: open the experience and fill in the booking
+[0-14] [DATA] Pending booking 2: 11-16-2026 9:00 AM, 2 people
+[0-14] [STEP] Pending booking 2: Book and verify the Payment prices
+[0-14] [STEP] Pending booking 2: cancel Payment (booking stays pending)
+[0-14] [STEP] Pending booking 2: find the booking in Bookings
+[0-14] [DATA] Pending booking 2: Booking ID 4358, status "Pending"
+[0-14] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-01-experience-booking.spec.ts
+[0-15] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-15] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-15] [DATA] Paid: 4355, 4357; pending: 4356, 4358
+[0-15] [STEP] Log in as traveler
+[0-15] 2026-11-12T03:48:12.729Z WARN webdriver: Request encountered a stale element - terminating request
+[0-15] 2026-11-12T03:48:12.883Z WARN webdriver: Request encountered a stale element - terminating request
+[0-15] [STEP] Verify all bookings in Bookings
+[0-15] [STEP] Verify the On Going booking Details
+[0-15] [STEP] Verify the transactions
+[0-15] [DATA] Transaction amounts: 183.6, 91.8
+[0-15] [STEP] Verify the payments in View
+[0-15] 2026-11-12T03:49:01.728Z WARN webdriver: Request encountered a stale element - terminating request
+[0-15] 2026-11-12T03:49:01.842Z WARN webdriver: Request encountered a stale element - terminating request
+[0-15] 2026-11-12T03:49:03.155Z WARN webdriver: Request encountered a stale element - terminating request
+[0-15] 2026-11-12T03:49:03.268Z WARN webdriver: Request encountered a stale element - terminating request
+[0-15] [STEP] Verify the charged amounts match the Payment dialog
+[0-15] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[0-16] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-16] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-16] [DATA] Traveler: Traveler Automation
+[0-16] [STEP] Log in as localite
+[0-16] [INFO] The app is not in front (com.android.chrome); reopening it.
+[0-16] [INFO] The app is not in front (com.android.chrome); reopening it.
+[0-16] 2026-11-12T03:49:24.996Z WARN webdriver: WebDriverError: Timed out after 10040ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-16] 2026-11-12T03:49:39.528Z ERROR webdriver: WebDriverError: Timed out after 14519ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-16] 2026-11-12T03:49:50.056Z WARN webdriver: WebDriverError: Timed out after 10501ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-16] 2026-11-12T03:50:00.587Z ERROR webdriver: WebDriverError: Timed out after 10501ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-16] [INFO] The app is not in front (com.android.chrome); reopening it.
+[0-16] [STEP] Verify all bookings in Bookings
+[0-16] 2026-11-12T03:50:17.614Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:50:49.263Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:50:49.307Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:50:56.162Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:50:56.271Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:51:02.671Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:51:34.243Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:51:34.291Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:51:40.420Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:51:40.514Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] [STEP] Verify the transactions
+[0-16] [DATA] Booking 4355: $183.60
+[0-16] [DATA] Booking 4357: $91.80
+[0-16] [STEP] Verify the earnings in View
+[0-16] [DATA] Booking 4355: Commission 16% = $28.80, Localite Earnings = $151.20
+[0-16] 2026-11-12T03:51:46.551Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] 2026-11-12T03:51:46.625Z WARN webdriver: Request encountered a stale element - terminating request
+[0-16] [DATA] Booking 4357: Commission 16% = $14.40, Localite Earnings = $75.60
+[0-16] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[0-17] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-17] [DATA] Traveler email: autotraveler+776528@yopmail.com
+[0-17] [DATA] Cancel: 4357 (On Going), 4358 (pending)
+[0-17] [STEP] Log in as traveler and open Bookings
+[0-17] 2026-11-12T03:52:03.975Z WARN webdriver: Request encountered a stale element - terminating request
+[0-17] 2026-11-12T03:52:04.163Z WARN webdriver: Request encountered a stale element - terminating request
+[0-17] [STEP] Cancel the On Going booking
+[0-17] [STEP] Cancel the pending booking
+[0-17] [STEP] Verify both bookings are cancelled for the localite
+[0-17] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[0-18] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-18] [DATA] Cancel: 4355 (On Going), 4356 (pending)
+[0-18] [STEP] Log in as localite and open Bookings
+[0-18] 2026-11-12T03:53:37.094Z WARN webdriver: WebDriverError: Timed out after 10043ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-18] 2026-11-12T03:53:51.901Z ERROR webdriver: WebDriverError: Timed out after 14790ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-18] 2026-11-12T03:54:02.423Z WARN webdriver: WebDriverError: Timed out after 10505ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-18] 2026-11-12T03:54:12.939Z ERROR webdriver: WebDriverError: Timed out after 10503ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work when running "elements" with method "POST"
+[0-18] 2026-11-12T03:54:23.742Z WARN webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-18] 2026-11-12T03:54:34.268Z ERROR webdriver: WebDriverError: Timed out after 10502ms waiting for the root AccessibilityNodeInfo in the active window. Make sure the active window is not constantly hogging the main UI thread (e.g. the application is being idle long enough), so the accessibility manager could do its work. Try changing the 'enforceXPath1' driver setting to 'true' in order to workaround the problem. when running "elements" with method "POST"
+[0-18] [INFO] The app is not in front (com.android.chrome); reopening it.
+[0-18] [STEP] Cancel the On Going booking
+[0-18] [STEP] Cancel the pending booking
+[0-18] [FAILED] Cancel the pending booking: element ("//android.widget.EditText[starts-with(@hint, "Please write your reason here")]") still displayed after 60000ms
+[0-18] Error in "mobile-flow-localite-cancel.mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled"
+Error: Step "Cancel the pending booking" failed: element ("//android.widget.EditText[starts-with(@hint, "Please write your reason here")]") still displayed after 60000ms
+    at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+    at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:49:5)
+[0-18] RETRYING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] RUNNING in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[0-18] [DATA] Localite email: autolocalite+707309@yopmail.com
+[0-18] [DATA] Cancel: 4355 (On Going), 4356 (pending)
+[0-18] [STEP] Log in as localite and open Bookings
+[0-18] [STEP] Cancel the On Going booking
+[0-18] [INFO] Booking 4355 was already cancelled.
+[0-18] [STEP] Cancel the pending booking
+[0-18] [STEP] Verify both bookings are cancelled for the traveler
+[0-18] 2026-11-12T03:58:05.218Z WARN webdriver: Request encountered a stale element - terminating request
+[0-18] 2026-11-12T03:58:05.485Z WARN webdriver: Request encountered a stale element - terminating request
+[0-18] PASSED in Android on Android - file:///home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts (1 retries)
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[app-debug.apk Android #0-0] Running: app-debug.apk on Android
+[app-debug.apk Android #0-0] Session ID: f23cde67-8e6a-4965-9563-6d6ee06171de
+[app-debug.apk Android #0-0]
+[app-debug.apk Android #0-0] » tests/auth/mobile-login.spec.ts
+[app-debug.apk Android #0-0] mobile-login
+[app-debug.apk Android #0-0]    ✓ mobile AUTH-001 | Login fails with an unregistered email
+[app-debug.apk Android #0-0]    ✓ mobile AUTH-002 | Registered user can access the Profile screen
+[app-debug.apk Android #0-0]
+[app-debug.apk Android #0-0] 2 passing (31s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-1] Running: app-debug.apk on Android
+[app-debug.apk Android #0-1] Session ID: 9209ec82-8488-464b-b013-f0d448f0eb95
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] » tests/auth/mobile-traveler-signup.spec.ts
+[app-debug.apk Android #0-1] mobile-traveler-signup
+[app-debug.apk Android #0-1]    ✓ mobile AUTH-003 | Traveler can complete the signup process
+[app-debug.apk Android #0-1]
+[app-debug.apk Android #0-1] 1 passing (57.5s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-2] Running: app-debug.apk on Android
+[app-debug.apk Android #0-2] Session ID: 197fb0df-2edb-40d3-9556-42913274401a
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] » tests/auth/mobile-localite-signup-and-verify.spec.ts
+[app-debug.apk Android #0-2] mobile-localite-signup-and-verify
+[app-debug.apk Android #0-2]    ✓ mobile LOC-001 | New localite signs up and is verified by an admin
+[app-debug.apk Android #0-2]
+[app-debug.apk Android #0-2] 1 passing (56.4s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-3] Running: app-debug.apk on Android
+[app-debug.apk Android #0-3] Session ID: f79707e9-7693-48eb-bd73-617596122d2f
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] » tests/localite/mobile-create-experience.spec.ts
+[app-debug.apk Android #0-3] mobile-create-experience
+[app-debug.apk Android #0-3]    ✓ mobile EXP-002 | Localite creates and publishes an experience
+[app-debug.apk Android #0-3]
+[app-debug.apk Android #0-3] 1 passing (2m 23.6s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-4] Running: app-debug.apk on Android
+[app-debug.apk Android #0-4] Session ID: b079ce0f-b72e-4473-a66d-e0f23d11e9b6
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] » tests/localite/mobile-create-gallery.spec.ts
+[app-debug.apk Android #0-4] mobile-create-gallery
+[app-debug.apk Android #0-4]    ✓ mobile GAL-001 | Localite creates a gallery and it appears on the profile
+[app-debug.apk Android #0-4]
+[app-debug.apk Android #0-4] 1 passing (40.2s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-5] Running: app-debug.apk on Android
+[app-debug.apk Android #0-5] Session ID: ab61a15f-1d8e-42b9-8830-ca4974da2c6b
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] » tests/localite/mobile-edit-profile.spec.ts
+[app-debug.apk Android #0-5] mobile-edit-profile
+[app-debug.apk Android #0-5]    ✖ mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1 failing (1m 13.9s)
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1) mobile-edit-profile mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5] Step "Edit name, bio, and experiences" failed: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+[app-debug.apk Android #0-5] Error: Step "Edit name, bio, and experiences" failed: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+[app-debug.apk Android #0-5]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-5]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:31:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-5] Running: app-debug.apk on Android
+[app-debug.apk Android #0-5] Session ID: 38b34a1f-4155-492d-860b-98421e5126d0
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] » tests/localite/mobile-edit-profile.spec.ts
+[app-debug.apk Android #0-5] mobile-edit-profile
+[app-debug.apk Android #0-5]    ✖ mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1 failing (1m 13.3s)
+[app-debug.apk Android #0-5]
+[app-debug.apk Android #0-5] 1) mobile-edit-profile mobile PRF-002 | Localite edits name, bio, and hosted experiences
+[app-debug.apk Android #0-5] Step "Edit name, bio, and experiences" failed: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+[app-debug.apk Android #0-5] Error: Step "Edit name, bio, and experiences" failed: Can't call getText on element with selector "//android.widget.EditText[starts-with(@hint, "Search location")]" because element wasn't found
+[app-debug.apk Android #0-5]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-5]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-edit-profile.spec.ts:31:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-6] Running: app-debug.apk on Android
+[app-debug.apk Android #0-6] Session ID: 3ae220da-ddd8-4b98-9bfa-ca4157e120c8
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] » tests/localite/mobile-preview-profile.spec.ts
+[app-debug.apk Android #0-6] mobile-preview-profile
+[app-debug.apk Android #0-6]    ✓ mobile PRF-001 | Localite previews the profile and goes back
+[app-debug.apk Android #0-6]
+[app-debug.apk Android #0-6] 1 passing (34.5s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-7] Running: app-debug.apk on Android
+[app-debug.apk Android #0-7] Session ID: 09b29e61-4fef-4a8e-aad7-c54c5bdbcd55
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] » tests/localite/mobile-share-profile.spec.ts
+[app-debug.apk Android #0-7] mobile-share-profile
+[app-debug.apk Android #0-7]    ✓ mobile PRF-003 | Localite opens and closes the share sheet from the profile
+[app-debug.apk Android #0-7]
+[app-debug.apk Android #0-7] 1 passing (31.6s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-8] Running: app-debug.apk on Android
+[app-debug.apk Android #0-8] Session ID: 7c1eac70-3609-4470-b35f-40bcda16daf3
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] » tests/localite/mobile-left-menu.spec.ts
+[app-debug.apk Android #0-8] mobile-left-menu
+[app-debug.apk Android #0-8]    ✓ mobile MENU-001 | Localite opens each item of the left menu
+[app-debug.apk Android #0-8]
+[app-debug.apk Android #0-8] 1 passing (55.6s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-9] Running: app-debug.apk on Android
+[app-debug.apk Android #0-9] Session ID: 5726ee13-3898-4b40-87b4-8c7d0ceaffe1
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] » tests/localite/mobile-localite-settings.spec.ts
+[app-debug.apk Android #0-9] mobile-localite-settings
+[app-debug.apk Android #0-9]    ✓ mobile SET-002 | Localite changes the password and logs in with it
+[app-debug.apk Android #0-9]
+[app-debug.apk Android #0-9] 1 passing (1m 52.6s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-10] Running: app-debug.apk on Android
+[app-debug.apk Android #0-10] Session ID: 7cfc91f2-c7d2-42de-9caa-1b20d707a2a5
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] » tests/localite/mobile-referral-program.spec.ts
+[app-debug.apk Android #0-10] mobile-referral-program
+[app-debug.apk Android #0-10]    ✖ mobile REF-001 | Referral program: referrer earns Referral % of the commission and withdraws it
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] 1 failing (4m 5.2s)
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] 1) mobile-referral-program mobile REF-001 | Referral program: referrer earns Referral % of the commission and withdraws it
+[app-debug.apk Android #0-10] Step "Traveler: open "Experience For Referral"" failed: element ("//*[starts-with(@content-desc, "Experience For Referral
+")]") still not displayed after 5000ms
+[app-debug.apk Android #0-10] Error: Step "Traveler: open "Experience For Referral"" failed: element ("//*[starts-with(@content-desc, "Experience For Referral
+[app-debug.apk Android #0-10] ")]") still not displayed after 5000ms
+[app-debug.apk Android #0-10]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-10]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts:150:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-10] Running: app-debug.apk on Android
+[app-debug.apk Android #0-10] Session ID: 160023f8-d2fd-42a5-8482-771aa2617201
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] » tests/localite/mobile-referral-program.spec.ts
+[app-debug.apk Android #0-10] mobile-referral-program
+[app-debug.apk Android #0-10]    ✖ mobile REF-001 | Referral program: referrer earns Referral % of the commission and withdraws it
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] 1 failing (4m 9.1s)
+[app-debug.apk Android #0-10]
+[app-debug.apk Android #0-10] 1) mobile-referral-program mobile REF-001 | Referral program: referrer earns Referral % of the commission and withdraws it
+[app-debug.apk Android #0-10] Step "Traveler: open "Experience For Referral"" failed: element ("//*[starts-with(@content-desc, "Experience For Referral
+")]") still not displayed after 5000ms
+[app-debug.apk Android #0-10] Error: Step "Traveler: open "Experience For Referral"" failed: element ("//*[starts-with(@content-desc, "Experience For Referral
+[app-debug.apk Android #0-10] ")]") still not displayed after 5000ms
+[app-debug.apk Android #0-10]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-10]     at process.processTimers (node:internal/timers:518:9)
+[app-debug.apk Android #0-10]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/localite/mobile-referral-program.spec.ts:150:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-11] Running: app-debug.apk on Android
+[app-debug.apk Android #0-11] Session ID: 44278b20-dab5-4fbf-adc3-2f7011b2260e
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] » tests/traveler/mobile-stories.spec.ts
+[app-debug.apk Android #0-11] mobile-stories
+[app-debug.apk Android #0-11]    ✖ mobile STR-001 | Traveler shares a story after login and it appears in Stories
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] 1 failing (35s)
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] 1) mobile-stories mobile STR-001 | Traveler shares a story after login and it appears in Stories
+[app-debug.apk Android #0-11] Step "Fill in the story" failed: element ("(//android.widget.EditText)[2]") still not displayed after 10000ms
+[app-debug.apk Android #0-11] Error: Step "Fill in the story" failed: element ("(//android.widget.EditText)[2]") still not displayed after 10000ms
+[app-debug.apk Android #0-11]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-11]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/traveler/mobile-stories.spec.ts:36:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-11] Running: app-debug.apk on Android
+[app-debug.apk Android #0-11] Session ID: 83609d00-f682-4a32-9225-d32d781704fe
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] » tests/traveler/mobile-stories.spec.ts
+[app-debug.apk Android #0-11] mobile-stories
+[app-debug.apk Android #0-11]    ✓ mobile STR-001 | Traveler shares a story after login and it appears in Stories
+[app-debug.apk Android #0-11]
+[app-debug.apk Android #0-11] 1 passing (1m)
+------------------------------------------------------------------
+[app-debug.apk Android #0-12] Running: app-debug.apk on Android
+[app-debug.apk Android #0-12] Session ID: 34fc285f-bf16-4eaf-812f-08a41dfb0a76
+[app-debug.apk Android #0-12]
+[app-debug.apk Android #0-12] » tests/traveler/mobile-edit-profile.spec.ts
+[app-debug.apk Android #0-12] mobile-traveler-edit-profile
+[app-debug.apk Android #0-12]    ✓ mobile SET-001 | Traveler edits name and phone on Edit Profile
+[app-debug.apk Android #0-12]
+[app-debug.apk Android #0-12] 1 passing (27s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-13] Running: app-debug.apk on Android
+[app-debug.apk Android #0-13] Session ID: de80a86a-c4c2-4d3d-aa0c-4165a6f764bc
+[app-debug.apk Android #0-13]
+[app-debug.apk Android #0-13] » tests/traveler/mobile-wishlist.spec.ts
+[app-debug.apk Android #0-13] mobile-wishlist
+[app-debug.apk Android #0-13]    ✓ mobile WSH-001 | Traveler creates a wishlist and saves an experience to it
+[app-debug.apk Android #0-13]
+[app-debug.apk Android #0-13] 1 passing (32.3s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-14] Running: app-debug.apk on Android
+[app-debug.apk Android #0-14] Session ID: 1286f4a7-7728-4141-90e6-982f479ec15b
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] » tests/flows/booking/mobile-01-experience-booking.spec.ts
+[app-debug.apk Android #0-14] mobile-flow-booking
+[app-debug.apk Android #0-14]    ✓ mobile BKG-001 | Traveler books the created experience: 2 paid and 2 pending
+[app-debug.apk Android #0-14]
+[app-debug.apk Android #0-14] 1 passing (3m 59.9s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-15] Running: app-debug.apk on Android
+[app-debug.apk Android #0-15] Session ID: c0b4505b-90f1-4b39-b225-dc2b5295dfc5
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] » tests/flows/booking/mobile-02-traveler-bookings-after-bookings.spec.ts
+[app-debug.apk Android #0-15] mobile-flow-traveler-bookings
+[app-debug.apk Android #0-15]    ✓ mobile DSH-002 | Bookings and Transaction History show the paid and pending bookings
+[app-debug.apk Android #0-15]
+[app-debug.apk Android #0-15] 1 passing (1m 4.6s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-16] Running: app-debug.apk on Android
+[app-debug.apk Android #0-16] Session ID: 2c6d1400-82ea-48a8-9f7c-33fa932d7b7b
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] » tests/flows/booking/mobile-03-localite-bookings-after-bookings.spec.ts
+[app-debug.apk Android #0-16] mobile-flow-localite-bookings
+[app-debug.apk Android #0-16]    ✓ mobile LBK-001 | Localite sees the traveler bookings, transactions, and earnings
+[app-debug.apk Android #0-16]
+[app-debug.apk Android #0-16] 1 passing (2m 39.7s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-17] Running: app-debug.apk on Android
+[app-debug.apk Android #0-17] Session ID: d223c933-0a57-45ea-8b8b-3ed1bc7025bb
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] » tests/flows/booking/mobile-04-traveler-cancel-booking.spec.ts
+[app-debug.apk Android #0-17] mobile-flow-traveler-cancel
+[app-debug.apk Android #0-17]    ✓ mobile CNL-001 | Traveler cancels an On Going and a pending booking; the localite sees them cancelled
+[app-debug.apk Android #0-17]
+[app-debug.apk Android #0-17] 1 passing (1m 31.5s)
+------------------------------------------------------------------
+[app-debug.apk Android #0-18] Running: app-debug.apk on Android
+[app-debug.apk Android #0-18] Session ID: 860f96aa-5b07-4588-ad02-1c3d9c564f07
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] » tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[app-debug.apk Android #0-18] mobile-flow-localite-cancel
+[app-debug.apk Android #0-18]    ✖ mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] 1 failing (3m 24.1s)
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] 1) mobile-flow-localite-cancel mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled
+[app-debug.apk Android #0-18] Step "Cancel the pending booking" failed: element ("//android.widget.EditText[starts-with(@hint, "Please write your reason here")]") still displayed after 60000ms
+[app-debug.apk Android #0-18] Error: Step "Cancel the pending booking" failed: element ("//android.widget.EditText[starts-with(@hint, "Please write your reason here")]") still displayed after 60000ms
+[app-debug.apk Android #0-18]     at step (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/helpers/mobile-step.ts:11:11)
+[app-debug.apk Android #0-18]     at async Context.<anonymous> (/home/runner/work/Imerzn-MobileTest/Imerzn-MobileTest/tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts:49:5)
+------------------------------------------------------------------
+[app-debug.apk Android #0-18] Running: app-debug.apk on Android
+[app-debug.apk Android #0-18] Session ID: 5031ba26-643c-4f33-a2d3-ef56fee10156
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] » tests/flows/booking/mobile-05-localite-cancel-booking.spec.ts
+[app-debug.apk Android #0-18] mobile-flow-localite-cancel
+[app-debug.apk Android #0-18]    ✓ mobile LCN-001 | Localite cancels an On Going and a pending booking; the traveler sees them cancelled
+[app-debug.apk Android #0-18]
+[app-debug.apk Android #0-18] 1 passing (1m 49.6s)
+
+
+Spec Files:	 17 passed, 4 retries, 2 failed, 19 total (100% completed) in 00:38:59  
+
